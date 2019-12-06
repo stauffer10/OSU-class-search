@@ -1,0 +1,16 @@
+<h1>Create a Course</h1>
+
+<%= form_for @courses do |f| %>
+    <p>
+        <%= f.label :coursename %><br/>
+        <%= f.text_field :coursename %>
+    </p>
+
+    <p>
+        <%= f.label :course_content %><br/>
+        <%= f.text_field :course_content %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+<% end %>
