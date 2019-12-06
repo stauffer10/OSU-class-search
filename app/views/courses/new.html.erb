@@ -1,6 +1,15 @@
 <h1>Create a Course</h1>
 
-<%= form_for @courses do |f| %>
+<% if @course.errors.any? %>
+<h2>The following errors prevented courses from created</h2>
+<ul>
+    <% @course.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+</ul>
+<% end %>
+
+<%= form_for @course do |f| %>
     <p>
         <%= f.label :coursename %><br/>
         <%= f.text_field :coursename %>

@@ -1,17 +1,24 @@
 class CoursesController < ApplicationController
     def new
-        @courses = Course.new
+        @course = Course.new
     end
 
     def create
         #render plain: params[:course].inspect
         @course = Course.new(course_params)
-        @course.save
-        redirect_to courses_show(@course)
+        #@course.save
+        #redirect_to course_path(@course)
+
+        if @course.save
+            flash[:notice] = "New course has created"
+            redirect_to course_path(@course)
+        else 
+            render 'new'
+        end
     end
 
     def show
-        
+        @course = Course.find(params[:id])
     end
 
     private
