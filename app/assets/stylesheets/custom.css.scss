@@ -38,7 +38,6 @@ $navbar-default-bg: #eb3434;
     background-color: black;
 }
 
-
 footer {
     margin-top: 45px;
     padding-top: 5px;
@@ -64,7 +63,7 @@ footer ul li {
     margin-left: 15px;
 }
 
-.article-actions {
+.course-actions {
     border-top: 3px solid #eaeaea;
     padding-top: 5px;
 }
@@ -73,12 +72,12 @@ footer ul li {
     margin-top: 0;
 }
 
-.article-title {
+.course-title {
     font-weight: bold;
     font-size: 1.5em;
 }
 
-.article-body {
+.course-body {
     border-top: 1px solid #eaeaea;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -89,7 +88,7 @@ footer ul li {
     padding-left: 0;
 }
 
-.article-meta-details {
+.course-meta-details {
     border-top: 1px solid #eaeaea;
     padding-top: 12px;
 }
