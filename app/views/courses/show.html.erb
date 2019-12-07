@@ -1,4 +1,7 @@
 <h1>Showing selected Courses</h1>
 
 <p>Course Name: <%= @course.coursename %>
-<p>Course Content: <%= @course.course_content %>
+<p>Course Content: <%= @course.course_content %></br>
+
+<%= link_to "Edit this courses", edit_course_path(@course) %></br>
+<%= link_to "Back to courses listing", courses_path %>

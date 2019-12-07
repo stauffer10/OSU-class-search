@@ -1,4 +1,8 @@
 class CoursesController < ApplicationController
+    def index
+        @courses = Course.all
+    end
+    
     def new
         @course = Course.new
     end
@@ -19,6 +23,27 @@ class CoursesController < ApplicationController
 
     def show
         @course = Course.find(params[:id])
+    end
+
+    def destroy
+        @course = Course.find(params[:id])
+        @course.destroy
+        flash[:notice] = "Course was deleted"
+        redirect_to courses_path
+    end
+
+    def edit
+        @course = Course.find(params[:id])
+    end
+
+    def update
+        @course = Course.find(params[:id])
+        if @course.update(course_params)
+            flash[:notice] = "Course was updated"
+            redirect_to course_path(@course)
+        else
+            render 'edit'
+        end
     end
 
     private
