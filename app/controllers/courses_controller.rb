@@ -25,6 +25,7 @@ class CoursesController < ApplicationController
 
     def show
         #@course = Course.find(params[:id])
+        #@courses = Course.all
     end
 
     def destroy
@@ -54,6 +55,6 @@ class CoursesController < ApplicationController
     end
 
     def course_params
-        params.require(:course).permit(:coursename, :course_content)
+        params.require(:course).permit(:coursename, :course_content, :prerequisite, :proctoredexams, :groupwork, :textbook, :reviews)
     end 
 end
