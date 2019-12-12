@@ -1,0 +1,7 @@
+<h2 align="center">Course ID: <%= @review.course_id %></h2>
+
+<div class = "well col-xs-8 col-xs-offset-2">
+    <h4 class = "center description"><strong>Reviews Content:</strong></h4>
+    <hr>
+    <%= simple_format(@review.reviews_content) %>
+</div>

@@ -10,47 +10,27 @@
     <li>Textbook: <%= @course.textbook %></li>
 
     <div class = "course-actions">
-        <%= link_to 'Edit', edit_course_path(@course), class: "btn btn-xs btn-primary" %>
-        <%= link_to 'Show', courses_path(@course), class: "btn btn-xs btn-success" %>
-        <%= link_to 'Delete', course_path(@course), method: :delete, data: {confirm: "Are you sure you want to delete the course?"}, class: "btn btn-xs btn-danger" %>
+        
+    <% if current_user.admin? %>
+        <%= link_to 'Edit Course', edit_course_path(@course), class: "btn btn-xs btn-primary" %>
+        <%= link_to 'Show Course', courses_path(@course), class: "btn btn-xs btn-success" %>
+        <%= link_to 'Delete Course', course_path(@course), method: :delete, data: {confirm: "Are you sure you want to delete the course?"}, class: "btn btn-xs btn-danger" %>
+    <% else %>
+        <%= link_to 'All Courses', courses_path(@course), class: "btn btn-xs btn-primary" %>
+        <%= link_to 'Create Reviews', edit_course_path(@course), class: "btn btn-xs btn-success" %>
+    <% end %>   
     </div>
 </div>
 
-<div class = "col-md-5">
-    <h2>Test content for right hafl page</h2>   
-    <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
-        <li class="ng-binding">"No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes. "<br><span class="pull-right"><i class="ng-binding">December 2019</i></span></li>
-    </ul>
-</div>
-
 <div class = "col-md-7">
-    <h2>Tips from other students</h2>
-    <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
-        <li class="ng-binding">"No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes. "<br><span class="pull-right"><i class="ng-binding">December 2019</i></span></li>
-    </ul>
-
-    <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
-        <li class="ng-binding">"Take a Udemy/Coursera class on Python beforehand. Doing so will morph this class into a cakewalk. I watched people with no prior programming experience wade into this class and have a ton of difficulty. I have no prior professional programming experience but took the Python Masterclass on Udemy over the summer before starting this class and the hardest I had to work was probably on the two projects at the end, both of which took me about 4-8 hours total time each. The time was simply due to how large the projects are compared to previous assignments and subsequent debugging and documenting you will have to do."<br><span class="pull-right"><i class="ng-binding">December 2019</i></span></li>
-    </ul>
-
-    <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
-        <li class="ng-binding">"Take an intro to python programing course and you will be fine."<br><span class="pull-right"><i class="ng-binding">December 2019</i></span></li>
-    </ul>
-
-    <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
-        <li class="ng-binding">"Take an intro to CS course in Python on Coursera or Udemy before this class. No textbook is needed, but I would google what the best beginner Python books are and buy one of those for extra practice/understanding. Stack Overflow has some pretty bad/inefficient code that doesn’t always work. Rely on academic literature online or your personal Python beginner’s book."<br><span class="pull-right"><i class="ng-binding">December 2019</i></span></li>
-    </ul>
-
-    <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
-        <li class="ng-binding">"Start projects early. Stay on top of concepts. "<br><span class="pull-right"><i class="ng-binding">December 2019</i></span></li>
-    </ul>
-
-    <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
-        <li class="ng-binding">"Practice as much hand-tracing of code as you can, especially for the midterm and final exam. The book is adequate at explaining concepts, but the video lectures were not very helpful. Do the end of chapter reviews, and code and compile examples from the book if you're having a tough time with a topic. Reach out for help when you feel you need it, as once you fall behind it's tough to catch back up. Google and YouTube will become your close friends as they have tons of available helpful information. The accelerated Summer schedule made this class feel a lot tougher than the original reviews I'd read here. "<br><span class="pull-right"><i class="ng-binding">December 2019</i></span></li>
-    </ul>
-
+    <h2>Reviews from other students</h2>
+    <%= form_with( model: @course, local: true, class: "col-md-7") do |f| %>
+        <% f.fields_for :reviews do |rf| %>
+            <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
+                <li class="ng-binding"><%= rf.object.reviews_content %></span></li>
+            </ul>
+        <% end %>
+    <% end %>
 </div>
-
-
 
     
