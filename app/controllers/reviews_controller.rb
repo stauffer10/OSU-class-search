@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
         @review.save
         if @review.save
             flash[:success] = "New review has created"
-            redirect_to review_path(@review)
+            redirect_to course_path(@review.course_id)
         else 
             render 'new'
         end
@@ -22,8 +22,6 @@ class ReviewsController < ApplicationController
 
     def show
         @reviews = Review.where(course_id: params[:id])
-        #payment_method = params[:payment][:payment_method]
-        #reviewsC = params[:reviews][:reviews_content]
     end
 
     def destroy
@@ -35,11 +33,10 @@ class ReviewsController < ApplicationController
     end
 
     def edit
-        #@review = Review.find(params[:id])
+        
     end
 
     def update
-        #@review = Review.find(params[:id])
         if @review.update(review_params)
             flash[:success] = "Review was updated with reviews"
             redirect_to review_path(@review)
