@@ -10,15 +10,17 @@
     <li>Textbook: <%= @course.textbook %></li>
 
     <div class = "course-actions">
-        
-    <% if current_user.admin? %>
-        <%= link_to 'Edit Course', edit_course_path(@course), class: "btn btn-xs btn-primary" %>
-        <%= link_to 'Show Course', courses_path(@course), class: "btn btn-xs btn-success" %>
-        <%= link_to 'Delete Course', course_path(@course), method: :delete, data: {confirm: "Are you sure you want to delete the course?"}, class: "btn btn-xs btn-danger" %>
-    <% else %>
-        <%= link_to 'All Courses', courses_path(@course), class: "btn btn-xs btn-primary" %>
-        <%= link_to 'Create Reviews', new_review_path, class: "btn btn-xs btn-success" %>
-    <% end %>   
+
+    <% if logged_in? %> 
+        <% if current_user.admin? %>
+            <%= link_to 'Edit Course', edit_course_path(@course), class: "btn btn-xs btn-primary" %>
+            <%= link_to 'Show Course', courses_path(@course), class: "btn btn-xs btn-success" %>
+            <%= link_to 'Delete Course', course_path(@course), method: :delete, data: {confirm: "Are you sure you want to delete the course?"}, class: "btn btn-xs btn-danger" %>
+        <% else %>
+            <%= link_to 'All Courses', courses_path(@course), class: "btn btn-xs btn-primary" %>
+            <%= link_to 'Create Reviews', new_review_path, class: "btn btn-xs btn-success" %>
+        <% end %> 
+    <% end %>  
     </div>
 </div>
 
@@ -27,9 +29,8 @@
     <% @course.reviews.each do |i| %>
         <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope">
             <li class="ng-binding"><%= i.reviews_content %></li>
+            <li class="ng-binding pull-right"><%= i.created_at.strftime('%Y/%m/%d')%></li>
         </ul>
     <% end %>
     </ul>
 </div>
-
-    

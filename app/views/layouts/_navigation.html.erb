@@ -18,8 +18,10 @@
           </ul>
         </li>
   
-        <li><%= link_to "Create New Course", new_course_path %></li>
-        <li><%= link_to "Create New Review", new_review_path %></li>
+        <% if logged_in? %>
+          <li><%= link_to "Create New Course", new_course_path %></li>
+          <li><%= link_to "Create New Review", new_review_path %></li>
+        <% end %>
       </ul>
        
       <ul class="nav navbar-nav navbar-right">
