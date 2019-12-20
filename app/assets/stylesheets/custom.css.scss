@@ -1,5 +1,4 @@
-$navbar-default-bg: #eb3434;
-//$navbar-default-bg: black;
+$navbar-default-bg: black;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -112,4 +111,8 @@ footer ul li {
 
 li {
     list-style: none;
+}
+
+.navbar-nav > li > a {
+    color:black;
 }
