@@ -1,7 +1,4 @@
 class User < ApplicationRecord
-    # User is a one side of one-to-many association
-    #has_many :courses, dependent: :destroy
-
     # this will change all email to lowercase and save it to DB
     before_save { self.email = email.downcase }
 
