@@ -1,7 +1,7 @@
 <h2 align="center">Course Title: <%= @course.coursename %></h2>
 
 <div class = "well col-xs-8 col-xs-offset-2">
-    <h4 class = "center description"><strong>Course Detail:</strong></h4>
+    <h4 class = "center description"><strong style="color:blue;">Course Detail:</strong></h4>
     <hr>
     <%= simple_format(@course.course_content) %>
     <li>Pre-requisite courses: <%= @course.prerequisite %></li>
