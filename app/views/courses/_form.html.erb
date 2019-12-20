@@ -4,7 +4,7 @@
     <div class = "col-xs-12">
         <%= form_with( model: @course, local: true, class: "form-horizontal") do |f| %>
         
-        <% if current_user.admin? %>
+        
             <div class = "form-group">
                 <div class = "control-label col-sm-2">
                     <%= f.label :coursename %>
@@ -64,22 +64,7 @@
                     <%= f.text_field :textbook, class: "form-control", placeholder: "Textbook of class", autofocus: true %>
                 </div>
             </div>
-
-        <% else %>
-            <div class="form-group">
-            <%= f.fields_for :reviews do |rf| %>
-                <hr>
-                <div class = "control-label col-sm-2">
-                    <%= rf.label :reviews %>
-                </div>
-                <div class = "col-sm-8">
-                    <%= rf.text_field :reviews_content, class: "form-control", placeholder: "Leave the reviews", autofocus: true %>
-                </div>
-                <hr>
-            <% end %>
-            </div>
-        <% end %>
-            
+     
             <div class="form-group">
                 <div class="col-sm-8 col-sm-offset-2">
                     <%= f.submit class: "btn btn-primary btn-lg" %>

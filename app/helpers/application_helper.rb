@@ -34,10 +34,6 @@ module ApplicationHelper
                 title: 'All Course'
             },
             {
-                url: reviews_path,
-                title: 'All Reviews'
-            },
-            {
                 url: new_course_path,
                 title: 'Create New Course'
             },

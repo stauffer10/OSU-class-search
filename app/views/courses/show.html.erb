@@ -17,12 +17,12 @@
         <%= link_to 'Delete Course', course_path(@course), method: :delete, data: {confirm: "Are you sure you want to delete the course?"}, class: "btn btn-xs btn-danger" %>
     <% else %>
         <%= link_to 'All Courses', courses_path(@course), class: "btn btn-xs btn-primary" %>
-        <%= link_to 'Create Reviews', edit_course_path(@course), class: "btn btn-xs btn-success" %>
+        <%= link_to 'Create Reviews', new_review_path, class: "btn btn-xs btn-success" %>
     <% end %>   
     </div>
 </div>
 
-<div class = "col-md-5">
+<div class = "col-md-6">
     <h2>Reviews from other students</h2>
     <% @course.reviews.each do |i| %>
         <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope">
