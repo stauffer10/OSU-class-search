@@ -22,15 +22,14 @@
     </div>
 </div>
 
-<div class = "col-md-7">
+<div class = "col-md-5">
     <h2>Reviews from other students</h2>
-    <%= form_with( model: @course, local: true, class: "col-md-7") do |f| %>
-        <% f.fields_for :reviews do |rf| %>
-            <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope" ng-repeat="tip in $ctrl.displayCourse.tips track by $index">
-                <li class="ng-binding"><%= rf.object.reviews_content %></span></li>
-            </ul>
-        <% end %>
+    <% @course.reviews.each do |i| %>
+        <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope">
+            <li class="ng-binding"><%= i.reviews_content %></li>
+        </ul>
     <% end %>
+    </ul>
 </div>
 
     
