@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user, :logged_in?
+    before_action :set_copyright
 
     def current_user
         # return this user if session user_id is stored backed by browser
@@ -19,5 +20,16 @@ class ApplicationController < ActionController::Base
         end 
     end
 
+    def set_copyright
+        @copyright = CopyrightViewTool::Renderer.copyright 'Naohito Muraoka', 'All rights reserved'
+    end
+end
+
+module CopyrightViewTool
+    class Renderer
+        def self.copyright name, message
+            "&copy: #{Time.now.year} | <b>#{name}</b> #{message}".html_safe
+        end
+    end
 end
 
