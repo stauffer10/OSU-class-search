@@ -68,14 +68,6 @@ Course.create!(
 )
 puts "5 course created"
 
-3.times do |reviews|
-    Review.create!(
-        reviews_content: "No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes. ",
-        course_id: Course.last.id
-    )
-end
-puts "3 reviews created"
-
 Review.create!(
     reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
     course_id: 2
@@ -100,4 +92,33 @@ Review.create!(
     reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
     course_id: 2
 )
+puts "5 reviews created"
+
+Difficulty.create!(
+    difficulty: 1,
+    course_id: 2
+)
+
+Difficulty.create!(
+    difficulty: 2,
+    course_id: 2
+)
+
+Difficulty.create!(
+    difficulty: 3,
+    course_id: 2
+)
+
+Difficulty.create!(
+    difficulty: 4,
+    course_id: 2
+)
+
+Difficulty.create!(
+    difficulty: 5,
+    course_id: 2
+)
+puts "5 difficulties created"
+
+
 
