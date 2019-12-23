@@ -1,26 +1,16 @@
 Name
-==== Oregon State University CS Course Exproler
+
+## OSU Course Search
 
 Overview
 
 ## Description
+Wondering how hard your next class might be? Did other students think CS162 was a bloodbath, too? This app can tell you!
 
-## Demo
+The OSU eCampus subreddit collects course reviews from real students into this spreadsheet, but the spreadsheet is large and hard to navigate. This app lets you view individual course reviews and aggregates difficulty ratings and time spent.
 
-## VS. 
-
-## Requirement
-
-## Usage
-
-## Install
-
-## Contribution
-
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
+This project was generated with the Ruby on Rails 5.2
 
 ## Author
 
-[tcnksm](https://github.com/tcnksm)
+This project was created entirely by Naohito Muraoka by using ruby on rails with HTML, CSS, Javascript. I am looking for other developer to work both for improving this projects and for working with another projects using Ruby on Rails. 
