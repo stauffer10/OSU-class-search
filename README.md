@@ -1,5 +1,7 @@
 ## OSU Course Search
 ![OSU-course-search](https://imgur.com/ONiZ0mA.jpeg "Sample")
+![OSU-course-search](https://imgur.com/a/GI1Ism3.jpeg "Sample2")
+![OSU-course-search](https://imgur.com/a/Ad7kdm1.jpeg "Sample3")
 
 ## Description
 Wondering how hard your next class might be? Did other students think CS162 was a bloodbath, too? This app can tell you!
