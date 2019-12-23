@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+##### Users #####
 User.create!(
     username: "Admin User",
     email: "admin@gmail.com",
@@ -29,7 +30,9 @@ User.create!(
     admin: false
 )
 puts "1 regular user created"
+##### Users #####
 
+##### Courses #####
 Course.create!(
     coursename: "CS160 - Computer Science Orientation",
     course_content: "Computer Science Orientation",
@@ -213,7 +216,9 @@ Course.create!(
     textbook: "Course materials"
 )
 puts "All course created"
+##### Courses #####
 
+##### Reviews CS161 #####
 Review.create!(
     reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
     course_id: 2,
@@ -227,24 +232,116 @@ Review.create!(
 )
 
 Review.create!(
-    reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
+    reviews_content: "No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes.",
     course_id: 2,
     difficulty: 2
 )
 
 Review.create!(
-    reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
+    reviews_content: "Take a Udemy/Coursera class on Python beforehand. Doing so will morph this class into a cakewalk. I watched people with no prior programming experience wade into this class and have a ton of difficulty. I have no prior professional programming experience but took the Python Masterclass on Udemy over the summer before starting this class and the hardest I had to work was probably on the two projects at the end, both of which took me about 4-8 hours total time each. The time was simply due to how large the projects are compared to previous assignments and subsequent debugging and documenting you will have to do.",
     course_id: 2,
     difficulty: 2
 )
 
 Review.create!(
-    reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
+    reviews_content: "Take an intro to python programing course and you will be fine.",
+    course_id: 2,
+    difficulty: 2
+)
+
+Review.create!(
+    reviews_content: "Take an intro to CS course in Python on Coursera or Udemy before this class. No textbook is needed, but I would google what the best beginner Python books are and buy one of those for extra practice/understanding. Stack Overflow has some pretty bad/inefficient code that doesn’t always work. Rely on academic literature online or your personal Python beginner’s book.",
     course_id: 2,
     difficulty: 3
 )
-puts "5 reviews created with difficulty scores"
+
+Review.create!(
+    reviews_content: "Start projects early. Stay on top of concepts. ",
+    course_id: 2,
+    difficulty: 3
+)
+
+Review.create!(
+    reviews_content: "Practice as much hand-tracing of code as you can, especially for the midterm and final exam. The book is adequate at explaining concepts, but the video lectures were not very helpful. Do the end of chapter reviews, and code and compile examples from the book if you're having a tough time with a topic. Reach out for help when you feel you need it, as once you fall behind it's tough to catch back up. Google and YouTube will become your close friends as they have tons of available helpful information. The accelerated Summer schedule made this class feel a lot tougher than the original reviews I'd read here. ",
+    course_id: 2,
+    difficulty: 3
+)
+
+Review.create!(
+    reviews_content: "Do practice coding problems",
+    course_id: 2,
+    difficulty: 4
+)
+
+Review.create!(
+    reviews_content: "Start assignments early, watch Cherno, participate in slack and ask TA questions. ",
+    course_id: 2,
+    difficulty: 1
+)
+puts "Reviews created for CS161"
+##### Reviews CS161 #####
 
 
+##### Reviews CS162 #####
+Review.create!(
+    reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
+    course_id: 3,
+    difficulty: 2
+)
 
+Review.create!(
+    reviews_content: "Do your best to stay on top of things and get help from TAs/Slack/Piazza. There's no book and no proctored exams in this python redesign, so the external annoyances are minimal. I took it knowing very little python or programming, and found it to be really quite easy. I found the optional text (which can be downloaded as free PDF or purchased inexpensively as a paperback) to be a wonderful extension and secondary resource. Weekly assignments are short (too short, I would say), and quizzes were open-internet and allowed for a retake. I took the quizzes first and used them to help guide what I looked at as I reviewed the weekly lessons on Canvas. Instructor clearly wants everyone to have reasonable shot at 100% on quizzes, based on this setup. Quiz items are randomized from a larger problem set, and the quiz answer options are randomized as well, so you do have to focus on actually learning the ideas. The instructor introduces git on week one, and assignments are submitted through GitHub. However, the true power of git becomes apparent during weeks 8, 9, and 10, when the projects become long enough to warrant branching and merging. Try to remember that git is your friend when you get there. You can do some early studying via Udemy or other Python resources if you like, but it is not at all required. People who come in knowing Python are actually at a sort of disadvantage: we are forbidden from using non-covered topics and tools, and some Piazza/Slack convos were complaints about Why can't I use function.method()?? Do your best to stick to the script, because we are meant to learn the actual logical execution.",
+    course_id: 3,
+    difficulty: 3
+)
+
+Review.create!(
+    reviews_content: "No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes.",
+    course_id: 3,
+    difficulty: 3
+)
+
+Review.create!(
+    reviews_content: "Take a Udemy/Coursera class on Python beforehand. Doing so will morph this class into a cakewalk. I watched people with no prior programming experience wade into this class and have a ton of difficulty. I have no prior professional programming experience but took the Python Masterclass on Udemy over the summer before starting this class and the hardest I had to work was probably on the two projects at the end, both of which took me about 4-8 hours total time each. The time was simply due to how large the projects are compared to previous assignments and subsequent debugging and documenting you will have to do.",
+    course_id: 3,
+    difficulty: 4
+)
+
+Review.create!(
+    reviews_content: "Take an intro to python programing course and you will be fine.",
+    course_id: 3,
+    difficulty: 4
+)
+
+Review.create!(
+    reviews_content: "Take an intro to CS course in Python on Coursera or Udemy before this class. No textbook is needed, but I would google what the best beginner Python books are and buy one of those for extra practice/understanding. Stack Overflow has some pretty bad/inefficient code that doesn’t always work. Rely on academic literature online or your personal Python beginner’s book.",
+    course_id: 3,
+    difficulty: 4
+)
+
+Review.create!(
+    reviews_content: "Start projects early. Stay on top of concepts. ",
+    course_id: 3,
+    difficulty: 4
+)
+
+Review.create!(
+    reviews_content: "Practice as much hand-tracing of code as you can, especially for the midterm and final exam. The book is adequate at explaining concepts, but the video lectures were not very helpful. Do the end of chapter reviews, and code and compile examples from the book if you're having a tough time with a topic. Reach out for help when you feel you need it, as once you fall behind it's tough to catch back up. Google and YouTube will become your close friends as they have tons of available helpful information. The accelerated Summer schedule made this class feel a lot tougher than the original reviews I'd read here. ",
+    course_id: 3,
+    difficulty: 5
+)
+
+Review.create!(
+    reviews_content: "Do practice coding problems",
+    course_id: 3,
+    difficulty: 5
+)
+
+Review.create!(
+    reviews_content: "Start assignments early, watch Cherno, participate in slack and ask TA questions. ",
+    course_id: 2,
+    difficulty: 5
+)
+puts "Reviews created for CS162"
+##### Reviews CS162 #####
 
