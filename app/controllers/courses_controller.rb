@@ -21,7 +21,14 @@ class CoursesController < ApplicationController
     end
 
     def show
-        
+        # Retrieving difficuly score from nested attributes
+        @score1 = @course.reviews.where(difficulty: 1).count
+        @score2 = @course.reviews.where(difficulty: 2).count
+        @score3 = @course.reviews.where(difficulty: 3).count
+        @score4 = @course.reviews.where(difficulty: 4).count
+        @score5 = @course.reviews.where(difficulty: 5).count
+
+        @chart = {"1 - Easy" => @score1, "2 - Mostly Easy" => @score2, "3 - Kind of hard" => @score3, "4 - Very challenging" => @score4, "5 - Prepare to be wrecked" => @score5}
     end
 
     def destroy
@@ -59,7 +66,8 @@ class CoursesController < ApplicationController
             :proctoredexams, 
             :groupwork, 
             :textbook, 
-            reviews_attributes: [:reviews_content]
+            reviews_attributes: [:reviews_content],
+            difficulty_scores_attributes: [:difficulty],
         )
     end 
 end

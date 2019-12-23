@@ -1,10 +1,16 @@
 class Course < ApplicationRecord
     # courses are many side of one-to-many associations
     has_many :reviews, dependent: :destroy
+    has_many :difficulties, dependent: :destroy
 
     accepts_nested_attributes_for :reviews,
                                    allow_destroy: true,
                                    reject_if: lambda {|attributes| attributes['reviews_content'].blank?}
+
+    accepts_nested_attributes_for :difficulties,
+                                   allow_destroy: true,
+                                   reject_if: lambda {|attributes| attributes['difficulty'].blank?}
+
 
     # ex, CS160, the first CS class at OSU 
     validates :coursename, presence: true, length: {minimum: 5, maximum: 50}

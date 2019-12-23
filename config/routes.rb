@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'new_reviews', to: 'courses#create_reviews'
   resources :courses
   resources :reviews
+  resources :difficulties
 
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
