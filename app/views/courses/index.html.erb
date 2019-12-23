@@ -4,7 +4,7 @@
 <% @courses.each do |course| %>
     <div class = "row">
         <div class = "col-xs-8" col-xs-offset-2">
-            <div class = "well well-lg">
+            <div class = "well well-lg data-id="<%= course.id %>"">
                 <div class = "course-title">
                     <%= link_to course.coursename, course_path(course) %></td>
                 </div>
