@@ -6,11 +6,6 @@ class Course < ApplicationRecord
                                    allow_destroy: true,
                                    reject_if: lambda {|attributes| attributes['reviews_content'].blank?}
 
-    accepts_nested_attributes_for :difficulties,
-                                   allow_destroy: true,
-                                   reject_if: lambda {|attributes| attributes['difficulty'].blank?}
-
-
     # ex, CS160, the first CS class at OSU 
     validates :coursename, presence: true, length: {minimum: 5, maximum: 50}
     validates :course_content, presence: true, length: {minimum: 10, maximum: 500}  
