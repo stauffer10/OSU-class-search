@@ -67,7 +67,6 @@ class CoursesController < ApplicationController
             :groupwork, 
             :textbook, 
             reviews_attributes: [:reviews_content],
-            difficulty_scores_attributes: [:difficulty],
         )
     end 
 end
