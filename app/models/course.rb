@@ -1,7 +1,6 @@
 class Course < ApplicationRecord
     # courses are many side of one-to-many associations
     has_many :reviews, dependent: :destroy
-    has_many :difficulties, dependent: :destroy
 
     accepts_nested_attributes_for :reviews,
                                    allow_destroy: true,
