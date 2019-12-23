@@ -32,6 +32,15 @@ class CoursesController < ApplicationController
         @career1 = @course.reviews.where(benefit: "Yes").count
         @career2 = @course.reviews.where(benefit: "No").count
         @career_benefit = {"1 - Yes" => @career1, "2 - Not really" => @career2}
+
+        @time1 = @course.reviews.where(time_spent: "1-3").count
+        @time2 = @course.reviews.where(time_spent: "4-6").count
+        @time3 = @course.reviews.where(time_spent: "7-9").count
+        @time4 = @course.reviews.where(time_spent: "10-12").count
+        @time5 = @course.reviews.where(time_spent: "13-15").count
+        @time_spent = {"1-3 hours" => @time1, "4-6 hours" => @time2, "7-9 hours" => @time3, "10-12 hours" => @time4, "13-15 hours" => @time5}
+
+
     end
 
     def destroy
@@ -69,7 +78,7 @@ class CoursesController < ApplicationController
             :proctoredexams, 
             :groupwork, 
             :textbook, 
-            reviews_attributes: [:reviews_content, :difficulty, :benefit],
+            reviews_attributes: [:reviews_content, :difficulty, :benefit, :time_spent],
         )
     end 
 end
