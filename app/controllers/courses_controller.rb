@@ -59,7 +59,8 @@ class CoursesController < ApplicationController
             :proctoredexams, 
             :groupwork, 
             :textbook, 
-            reviews_attributes: [:reviews_content]
+            reviews_attributes: [:reviews_content],
+            difficulty_scores_attributes: [:difficulty],
         )
     end 
 end
