@@ -3,4 +3,5 @@ class Review < ActiveRecord::Base
     belongs_to :course
     validates :reviews_content, presence: true, length: {minimum: 10, maximum: 2000}
     validates :difficulty, presence: true
+    validates :benefit, presence: true
 end
