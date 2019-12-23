@@ -9,7 +9,7 @@
                 </div>
 
                 <div class = "col-sm-8">
-                    <%= f.text_area :reviews_content, class: "form-control", placeholder: "Enter review of class", autofocus: true, rows: 7 %>
+                    <%= f.text_area :reviews_content, class: "form-control", placeholder: "Enter reviews of class", autofocus: true, rows: 7 %>
                 </div>
             </div>
 
@@ -18,7 +18,7 @@
                     <%= f.label :difficulty_score %>
                 </div>
                 <div class = "col-sm-8">
-                    <%= f.select :difficulty, [1, 2, 3, 4, 5], {include_blank: 'Difficulty Score'}, 
+                    <%= f.select :difficulty, [1, 2, 3, 4, 5], {include_blank: 'Difficulty Score', }, 
                 class: 'form-control' %>
                 </div>
             </div>
