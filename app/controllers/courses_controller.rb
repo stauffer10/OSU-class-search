@@ -27,8 +27,11 @@ class CoursesController < ApplicationController
         @score3 = @course.reviews.where(difficulty: 3).count
         @score4 = @course.reviews.where(difficulty: 4).count
         @score5 = @course.reviews.where(difficulty: 5).count
+        @challenge_score = {"1 - Easy" => @score1, "2 - Mostly Easy" => @score2, "3 - Kind of hard" => @score3, "4 - Very challenging" => @score4, "5 - Prepare to be wrecked" => @score5}
 
-        @chart = {"1 - Easy" => @score1, "2 - Mostly Easy" => @score2, "3 - Kind of hard" => @score3, "4 - Very challenging" => @score4, "5 - Prepare to be wrecked" => @score5}
+        @career1 = @course.reviews.where(benefit: "Yes").count
+        @career2 = @course.reviews.where(benefit: "No").count
+        @career_benefit = {"1 - Yes" => @career1, "2 - Not really" => @career2}
     end
 
     def destroy
@@ -66,7 +69,7 @@ class CoursesController < ApplicationController
             :proctoredexams, 
             :groupwork, 
             :textbook, 
-            reviews_attributes: [:reviews_content, :difficulty],
+            reviews_attributes: [:reviews_content, :difficulty, :benefit],
         )
     end 
 end

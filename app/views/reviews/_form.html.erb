@@ -3,6 +3,22 @@
 <div class = "row">
     <div class = "col-xs-12">
         <%= form_with( model: @review, local: true, class: "form-horizontal") do |f| %>
+
+            <div class="form-group">
+                <div class = "control-label col-sm-2">
+                    <%= f.label :course_name %>
+                </div>
+                <div class = "col-sm-8">
+                    <%= f.collection_select(:course_id, Course.all, :id, :coursename,
+                                                {
+                                                include_blank: "Select Course name"
+                                                },
+                                                class: 'form-control'
+                                            )
+                    %>
+                </div>
+            </div>
+
             <div class = "form-group">
                 <div class = "control-label col-sm-2">
                     <%= f.label :reviews_content %>
@@ -18,23 +34,16 @@
                     <%= f.label :difficulty_score %>
                 </div>
                 <div class = "col-sm-8">
-                    <%= f.select :difficulty, [1, 2, 3, 4, 5], {include_blank: 'Difficulty Score', }, 
-                class: 'form-control' %>
+                    <%= f.select :difficulty, [1, 2, 3, 4, 5], {include_blank: 'Difficulty Score'}, class: 'form-control' %>
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class = "form-group">
                 <div class = "control-label col-sm-2">
-                    <%= f.label :course_name %>
+                    <%= f.label :career_benefit %>
                 </div>
                 <div class = "col-sm-8">
-                    <%= f.collection_select(:course_id, Course.all, :id, :coursename,
-                                                {
-                                                include_blank: true
-                                                },
-                                                class: 'form-control'
-                                            )
-                    %>
+                    <%= f.select :benefit, ["Yes", "No"], {include_blank: 'Career Benefit'}, class: 'form-control' %>
                 </div>
             </div>
             
