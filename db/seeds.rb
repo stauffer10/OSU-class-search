@@ -218,6 +218,31 @@ Course.create!(
 puts "All course created"
 ##### Courses #####
 
+##### Reviews CS160 #####
+Review.create!(
+    reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
+    course_id: 1,
+    difficulty: 2,
+    benefit: "Yes",
+    time_spent: "4-6"
+)
+
+Review.create!(
+    reviews_content: "Do your best to stay on top of things and get help from TAs/Slack/Piazza. There's no book and no proctored exams in this python redesign, so the external annoyances are minimal. I took it knowing very little python or programming, and found it to be really quite easy. I found the optional text (which can be downloaded as free PDF or purchased inexpensively as a paperback) to be a wonderful extension and secondary resource. Weekly assignments are short (too short, I would say), and quizzes were open-internet and allowed for a retake. I took the quizzes first and used them to help guide what I looked at as I reviewed the weekly lessons on Canvas. Instructor clearly wants everyone to have reasonable shot at 100% on quizzes, based on this setup. Quiz items are randomized from a larger problem set, and the quiz answer options are randomized as well, so you do have to focus on actually learning the ideas. The instructor introduces git on week one, and assignments are submitted through GitHub. However, the true power of git becomes apparent during weeks 8, 9, and 10, when the projects become long enough to warrant branching and merging. Try to remember that git is your friend when you get there. You can do some early studying via Udemy or other Python resources if you like, but it is not at all required. People who come in knowing Python are actually at a sort of disadvantage: we are forbidden from using non-covered topics and tools, and some Piazza/Slack convos were complaints about Why can't I use function.method()?? Do your best to stick to the script, because we are meant to learn the actual logical execution.",
+    course_id: 1,
+    difficulty: 3,
+    benefit: "Yes",
+    time_spent: "4-6"
+)
+
+Review.create!(
+    reviews_content: "No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes.",
+    course_id: 1,
+    difficulty: 3,
+    benefit: "Yes",
+    time_spent: "7-9"
+)
+
 ##### Reviews CS161 #####
 Review.create!(
     reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
@@ -299,8 +324,6 @@ Review.create!(
     time_spent: "13-15"
 )
 puts "Reviews created for CS161"
-##### Reviews CS161 #####
-
 
 ##### Reviews CS162 #####
 Review.create!(
@@ -383,5 +406,77 @@ Review.create!(
     time_spent: "13-15"
 )
 puts "Reviews created for CS162"
-##### Reviews CS162 #####
 
+##### Reviews CS165 #####
+Review.create!(
+    reviews_content: "Study hard, keep good notes, get into good coding habits, and make sure you understand all of the assignment requirements!",
+    course_id: 4,
+    difficulty: 2,
+    benefit: "No",
+    time_spent: "4-6"
+)
+
+Review.create!(
+    reviews_content: "Do practice coding problems",
+    course_id: 4,
+    difficulty: 2,
+    benefit: "No",
+    time_spent: "4-6"
+)
+
+Review.create!(
+    reviews_content: "Start assignments early, watch Cherno, participate in slack and ask TA questions. ",
+    course_id: 4,
+    difficulty: 3,
+    benefit: "No",
+    time_spent: "1-3"
+)
+puts "Reviews created for CS165"
+
+##### Reviews CS225 #####
+Review.create!(
+    reviews_content: "Start early with homework. Make sure you do every exercise and read each assigned reading. Try doing extra problems. The class is not hard as long as you’re studying every day. Midterm and Final exams guides are there for a reason - do every problem listed there. Make sure to do problems in the lecture slides as well as in weekly quizzes. The TAs are very helpful, but make sure that you read assignments and do the problems first. ",
+    course_id: 5,
+    difficulty: 2,
+    benefit: "No",
+    time_spent: "4-6"
+)
+Review.create!(
+    reviews_content: "I came in with an unusual level of preparation for this course, so I'm not the best judge of difficulty. The structure (two weekly assignments, weekly 2-hour quiz, bi-weekly discussion post) means that all students will spend a lot of time on this course. Most of my classmates who took both 161 and 225 spent at least 80% of their school time on 225. The grading is extremely lenient overall, rewarding effort and attempts with large partial credit allocations. The professor was extremely present on Slack and Piazza both, and she seemed to be working hard to answer questions posed by students. Please ask your questions on Piazza and Slack. (And, goodness gracious, please understand that 'Anonymous' posts on Piazza are only anonymous from the students -- the instructor and TAs know who posted what.)",
+    course_id: 5,
+    difficulty: 2,
+    benefit: "Yes",
+    time_spent: "4-6"
+)
+Review.create!(
+    reviews_content: "Use outside resources especially on topics before the midterm. Make sure you understand homework and quizzes prior to midterm and final. Keep on top of the material as it is easy to fall behind. ",
+    course_id: 5,
+    difficulty: 3,
+    benefit: "Yes",
+    time_spent: "7-9-"
+)
+puts "Reviews created for CS225"
+
+##### Reviews CS261 #####
+Review.create!(
+    reviews_content: "Get a group as soon as Slack access is set up. The worksheets have some typos here and there so you'll want to make sure you read them carefully, but so long as you put in the effort you'll get the points. Do not start assignments late, especially the Hashmap one at the end, you will be dealing with a lot of seg faults if your pointer knowledge isn't great.",
+    course_id: 6,
+    difficulty: 3,
+    benefit: "Yes",
+    time_spent: "1-3"
+)
+Review.create!(
+    reviews_content: "I found this course really interesting and the topics covered are SUPER useful and important for pretty much every other class, especially Algorithms. The provided lectures and material are pretty poor so make sure you do whatever is necessary to understand what's being talked about. The concepts covered in this class are fundamental to lots of programming so it's easy to find outside resources.",
+    course_id: 6,
+    difficulty: 3,
+    benefit: "Yes",
+    time_spent: "1-3"
+)
+Review.create!(
+    reviews_content: "The only concepts from C that you might not have covered in earlier classes were void pointers and function pointers - these will come up in the last quarter of the class. No need to do any specialized C prep. The most valuable things you can do to keep a good grade are (in order of importance): 1. Join a group early via slack, preferably before class starts. The students forming groups then will be the most motivated, and will help push you when you start getting lazy halfway through. 2. Create an implementation of each data structure from each worksheet along with unit tests. This will end up being a lot of work (10 hours per week, and more when doing AVL Trees/Heaps) since there are generally 5 worksheets per week. Your own C implementations internalize the structures/code so that you can answer questions on the exams that you might not have done before (if you don't Leetcode). Generally, exam coding questions will be something from the worksheets but with a twist. 3. Leetcode practice targeting each data structure is a fantastic supplement to the worksheets and their implementations - this will really help on the exam coding questions. It seems like it's easy to get a bad grade. Lots of students complained about the exam difficulty, but I'm not sure what kind of prep they did. I feel like doing these three things (and staying on it) helped earn an easy 97% final grade. ",
+    course_id: 6,
+    difficulty: 4,
+    benefit: "No",
+    time_spent: "1-3"
+)
+puts "Reviews created for CS261"
