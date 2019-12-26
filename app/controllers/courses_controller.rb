@@ -29,9 +29,12 @@ class CoursesController < ApplicationController
         @score5 = @course.reviews.where(difficulty: 5).count
         @challenge_score = {"1 - Easy" => @score1, "2 - Mostly Easy" => @score2, "3 - Kind of hard" => @score3, "4 - Very challenging" => @score4, "5 - Prepare to be wrecked" => @score5}
 
-        @career1 = @course.reviews.where(benefit: "Yes").count
-        @career2 = @course.reviews.where(benefit: "No").count
-        @career_benefit = {"1 - Yes" => @career1, "2 - Not really" => @career2}
+        @career1 = @course.reviews.where(benefit: "1").count
+        @career2 = @course.reviews.where(benefit: "2").count
+        @career3 = @course.reviews.where(benefit: "3").count
+        @career4 = @course.reviews.where(benefit: "4").count
+        @career5 = @course.reviews.where(benefit: "5").count
+        @career_benefit = {"1 - Not benefit at all" => @career1, "2 - Less benefit" => @career2, "3 - Somewhat benefit" => @career3, "4 - Very useful for career" => @career4, "5 - Essential for career" => @career5}
 
         @time1 = @course.reviews.where(time_spent: "1-3").count
         @time2 = @course.reviews.where(time_spent: "4-6").count

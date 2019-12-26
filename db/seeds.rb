@@ -223,7 +223,7 @@ Review.create!(
     reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
     course_id: 1,
     difficulty: 2,
-    benefit: "Yes",
+    benefit: "1",
     time_spent: "4-6"
 )
 
@@ -231,7 +231,7 @@ Review.create!(
     reviews_content: "Do your best to stay on top of things and get help from TAs/Slack/Piazza. There's no book and no proctored exams in this python redesign, so the external annoyances are minimal. I took it knowing very little python or programming, and found it to be really quite easy. I found the optional text (which can be downloaded as free PDF or purchased inexpensively as a paperback) to be a wonderful extension and secondary resource. Weekly assignments are short (too short, I would say), and quizzes were open-internet and allowed for a retake. I took the quizzes first and used them to help guide what I looked at as I reviewed the weekly lessons on Canvas. Instructor clearly wants everyone to have reasonable shot at 100% on quizzes, based on this setup. Quiz items are randomized from a larger problem set, and the quiz answer options are randomized as well, so you do have to focus on actually learning the ideas. The instructor introduces git on week one, and assignments are submitted through GitHub. However, the true power of git becomes apparent during weeks 8, 9, and 10, when the projects become long enough to warrant branching and merging. Try to remember that git is your friend when you get there. You can do some early studying via Udemy or other Python resources if you like, but it is not at all required. People who come in knowing Python are actually at a sort of disadvantage: we are forbidden from using non-covered topics and tools, and some Piazza/Slack convos were complaints about Why can't I use function.method()?? Do your best to stick to the script, because we are meant to learn the actual logical execution.",
     course_id: 1,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "2",
     time_spent: "4-6"
 )
 
@@ -239,7 +239,7 @@ Review.create!(
     reviews_content: "No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes.",
     course_id: 1,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "3",
     time_spent: "7-9"
 )
 
@@ -248,7 +248,7 @@ Review.create!(
     reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
     course_id: 2,
     difficulty: 1,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "1-3"
 )
 
@@ -256,7 +256,7 @@ Review.create!(
     reviews_content: "Do your best to stay on top of things and get help from TAs/Slack/Piazza. There's no book and no proctored exams in this python redesign, so the external annoyances are minimal. I took it knowing very little python or programming, and found it to be really quite easy. I found the optional text (which can be downloaded as free PDF or purchased inexpensively as a paperback) to be a wonderful extension and secondary resource. Weekly assignments are short (too short, I would say), and quizzes were open-internet and allowed for a retake. I took the quizzes first and used them to help guide what I looked at as I reviewed the weekly lessons on Canvas. Instructor clearly wants everyone to have reasonable shot at 100% on quizzes, based on this setup. Quiz items are randomized from a larger problem set, and the quiz answer options are randomized as well, so you do have to focus on actually learning the ideas. The instructor introduces git on week one, and assignments are submitted through GitHub. However, the true power of git becomes apparent during weeks 8, 9, and 10, when the projects become long enough to warrant branching and merging. Try to remember that git is your friend when you get there. You can do some early studying via Udemy or other Python resources if you like, but it is not at all required. People who come in knowing Python are actually at a sort of disadvantage: we are forbidden from using non-covered topics and tools, and some Piazza/Slack convos were complaints about Why can't I use function.method()?? Do your best to stick to the script, because we are meant to learn the actual logical execution.",
     course_id: 2,
     difficulty: 1,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "4-6"
 )
 
@@ -264,7 +264,7 @@ Review.create!(
     reviews_content: "No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes.",
     course_id: 2,
     difficulty: 2,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "4-6"
 )
 
@@ -272,7 +272,7 @@ Review.create!(
     reviews_content: "Take a Udemy/Coursera class on Python beforehand. Doing so will morph this class into a cakewalk. I watched people with no prior programming experience wade into this class and have a ton of difficulty. I have no prior professional programming experience but took the Python Masterclass on Udemy over the summer before starting this class and the hardest I had to work was probably on the two projects at the end, both of which took me about 4-8 hours total time each. The time was simply due to how large the projects are compared to previous assignments and subsequent debugging and documenting you will have to do.",
     course_id: 2,
     difficulty: 2,
-    benefit: "Yes",
+    benefit: "5",
     time_spent: "4-6"
 )
 
@@ -280,7 +280,7 @@ Review.create!(
     reviews_content: "Take an intro to python programing course and you will be fine.",
     course_id: 2,
     difficulty: 2,
-    benefit: "Yes",
+    benefit: "5",
     time_spent: "4-6"
 )
 
@@ -288,7 +288,7 @@ Review.create!(
     reviews_content: "Take an intro to CS course in Python on Coursera or Udemy before this class. No textbook is needed, but I would google what the best beginner Python books are and buy one of those for extra practice/understanding. Stack Overflow has some pretty bad/inefficient code that doesn’t always work. Rely on academic literature online or your personal Python beginner’s book.",
     course_id: 2,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "5",
     time_spent: "7-9"
 )
 
@@ -296,7 +296,7 @@ Review.create!(
     reviews_content: "Start projects early. Stay on top of concepts. ",
     course_id: 2,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "3",
     time_spent: "7-9"
 )
 
@@ -304,7 +304,7 @@ Review.create!(
     reviews_content: "Practice as much hand-tracing of code as you can, especially for the midterm and final exam. The book is adequate at explaining concepts, but the video lectures were not very helpful. Do the end of chapter reviews, and code and compile examples from the book if you're having a tough time with a topic. Reach out for help when you feel you need it, as once you fall behind it's tough to catch back up. Google and YouTube will become your close friends as they have tons of available helpful information. The accelerated Summer schedule made this class feel a lot tougher than the original reviews I'd read here. ",
     course_id: 2,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "3",
     time_spent: "10-12"
 )
 
@@ -312,7 +312,7 @@ Review.create!(
     reviews_content: "Do practice coding problems",
     course_id: 2,
     difficulty: 4,
-    benefit: "No",
+    benefit: "3",
     time_spent: "10-12"
 )
 
@@ -320,7 +320,7 @@ Review.create!(
     reviews_content: "Start assignments early, watch Cherno, participate in slack and ask TA questions. ",
     course_id: 2,
     difficulty: 1,
-    benefit: "No",
+    benefit: "3",
     time_spent: "13-15"
 )
 puts "Reviews created for CS161"
@@ -330,7 +330,7 @@ Review.create!(
     reviews_content: "Do Repl.it code problems; study the model solutions carefully; try reading all the optional chapters; pay attention to what is covered on Canvas; do not use concepts/tools not covered yet; find a way to organize the material to keep track of what has been covered; revisit each week at least 2-3 times as you progress through the course; start coding week 9 and week 10 projects early; participate in online discussions — ask & answer; explain concepts to your classmates — helps you solidify; use pythontutor; get in the habit of drawing diagrams and variable states; get in the habit of tracing the code; the learning materials are thoroughly thought-through and have solid underlying logic.",
     course_id: 3,
     difficulty: 2,
-    benefit: "Yes",
+    benefit: "3",
     time_spent: "4-6"
 )
 
@@ -338,7 +338,7 @@ Review.create!(
     reviews_content: "Do your best to stay on top of things and get help from TAs/Slack/Piazza. There's no book and no proctored exams in this python redesign, so the external annoyances are minimal. I took it knowing very little python or programming, and found it to be really quite easy. I found the optional text (which can be downloaded as free PDF or purchased inexpensively as a paperback) to be a wonderful extension and secondary resource. Weekly assignments are short (too short, I would say), and quizzes were open-internet and allowed for a retake. I took the quizzes first and used them to help guide what I looked at as I reviewed the weekly lessons on Canvas. Instructor clearly wants everyone to have reasonable shot at 100% on quizzes, based on this setup. Quiz items are randomized from a larger problem set, and the quiz answer options are randomized as well, so you do have to focus on actually learning the ideas. The instructor introduces git on week one, and assignments are submitted through GitHub. However, the true power of git becomes apparent during weeks 8, 9, and 10, when the projects become long enough to warrant branching and merging. Try to remember that git is your friend when you get there. You can do some early studying via Udemy or other Python resources if you like, but it is not at all required. People who come in knowing Python are actually at a sort of disadvantage: we are forbidden from using non-covered topics and tools, and some Piazza/Slack convos were complaints about Why can't I use function.method()?? Do your best to stick to the script, because we are meant to learn the actual logical execution.",
     course_id: 3,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "3",
     time_spent: "4-6"
 )
 
@@ -346,7 +346,7 @@ Review.create!(
     reviews_content: "No textbook required, but free online PDF helps a lot when understanding material. Don't get behind on early material as is all reused on assignments... especially classes.",
     course_id: 3,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "3",
     time_spent: "7-9"
 )
 
@@ -354,7 +354,7 @@ Review.create!(
     reviews_content: "Take a Udemy/Coursera class on Python beforehand. Doing so will morph this class into a cakewalk. I watched people with no prior programming experience wade into this class and have a ton of difficulty. I have no prior professional programming experience but took the Python Masterclass on Udemy over the summer before starting this class and the hardest I had to work was probably on the two projects at the end, both of which took me about 4-8 hours total time each. The time was simply due to how large the projects are compared to previous assignments and subsequent debugging and documenting you will have to do.",
     course_id: 3,
     difficulty: 4,
-    benefit: "Yes",
+    benefit: "3",
     time_spent: "10-12"
 )
 
@@ -362,7 +362,7 @@ Review.create!(
     reviews_content: "Take an intro to python programing course and you will be fine.",
     course_id: 3,
     difficulty: 4,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "13-15"
 )
 
@@ -370,7 +370,7 @@ Review.create!(
     reviews_content: "Take an intro to CS course in Python on Coursera or Udemy before this class. No textbook is needed, but I would google what the best beginner Python books are and buy one of those for extra practice/understanding. Stack Overflow has some pretty bad/inefficient code that doesn’t always work. Rely on academic literature online or your personal Python beginner’s book.",
     course_id: 3,
     difficulty: 4,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "13-15"
 )
 
@@ -378,7 +378,7 @@ Review.create!(
     reviews_content: "Start projects early. Stay on top of concepts. ",
     course_id: 3,
     difficulty: 4,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "13-15"
 )
 
@@ -386,7 +386,7 @@ Review.create!(
     reviews_content: "Practice as much hand-tracing of code as you can, especially for the midterm and final exam. The book is adequate at explaining concepts, but the video lectures were not very helpful. Do the end of chapter reviews, and code and compile examples from the book if you're having a tough time with a topic. Reach out for help when you feel you need it, as once you fall behind it's tough to catch back up. Google and YouTube will become your close friends as they have tons of available helpful information. The accelerated Summer schedule made this class feel a lot tougher than the original reviews I'd read here. ",
     course_id: 3,
     difficulty: 5,
-    benefit: "No",
+    benefit: "5",
     time_spent: "13-15"
 )
 
@@ -394,7 +394,7 @@ Review.create!(
     reviews_content: "Do practice coding problems",
     course_id: 3,
     difficulty: 5,
-    benefit: "No",
+    benefit: "5",
     time_spent: "13-15"
 )
 
@@ -402,7 +402,7 @@ Review.create!(
     reviews_content: "Start assignments early, watch Cherno, participate in slack and ask TA questions. ",
     course_id: 2,
     difficulty: 5,
-    benefit: "No",
+    benefit: "5",
     time_spent: "13-15"
 )
 puts "Reviews created for CS162"
@@ -412,7 +412,7 @@ Review.create!(
     reviews_content: "Study hard, keep good notes, get into good coding habits, and make sure you understand all of the assignment requirements!",
     course_id: 4,
     difficulty: 2,
-    benefit: "No",
+    benefit: "3",
     time_spent: "4-6"
 )
 
@@ -420,7 +420,7 @@ Review.create!(
     reviews_content: "Do practice coding problems",
     course_id: 4,
     difficulty: 2,
-    benefit: "No",
+    benefit: "4",
     time_spent: "4-6"
 )
 
@@ -428,7 +428,7 @@ Review.create!(
     reviews_content: "Start assignments early, watch Cherno, participate in slack and ask TA questions. ",
     course_id: 4,
     difficulty: 3,
-    benefit: "No",
+    benefit: "5",
     time_spent: "1-3"
 )
 puts "Reviews created for CS165"
@@ -438,21 +438,21 @@ Review.create!(
     reviews_content: "Start early with homework. Make sure you do every exercise and read each assigned reading. Try doing extra problems. The class is not hard as long as you’re studying every day. Midterm and Final exams guides are there for a reason - do every problem listed there. Make sure to do problems in the lecture slides as well as in weekly quizzes. The TAs are very helpful, but make sure that you read assignments and do the problems first. ",
     course_id: 5,
     difficulty: 2,
-    benefit: "No",
+    benefit: "2",
     time_spent: "4-6"
 )
 Review.create!(
     reviews_content: "I came in with an unusual level of preparation for this course, so I'm not the best judge of difficulty. The structure (two weekly assignments, weekly 2-hour quiz, bi-weekly discussion post) means that all students will spend a lot of time on this course. Most of my classmates who took both 161 and 225 spent at least 80% of their school time on 225. The grading is extremely lenient overall, rewarding effort and attempts with large partial credit allocations. The professor was extremely present on Slack and Piazza both, and she seemed to be working hard to answer questions posed by students. Please ask your questions on Piazza and Slack. (And, goodness gracious, please understand that 'Anonymous' posts on Piazza are only anonymous from the students -- the instructor and TAs know who posted what.)",
     course_id: 5,
     difficulty: 2,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "4-6"
 )
 Review.create!(
     reviews_content: "Use outside resources especially on topics before the midterm. Make sure you understand homework and quizzes prior to midterm and final. Keep on top of the material as it is easy to fall behind. ",
     course_id: 5,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "7-9-"
 )
 puts "Reviews created for CS225"
@@ -462,21 +462,76 @@ Review.create!(
     reviews_content: "Get a group as soon as Slack access is set up. The worksheets have some typos here and there so you'll want to make sure you read them carefully, but so long as you put in the effort you'll get the points. Do not start assignments late, especially the Hashmap one at the end, you will be dealing with a lot of seg faults if your pointer knowledge isn't great.",
     course_id: 6,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "3",
     time_spent: "1-3"
 )
 Review.create!(
     reviews_content: "I found this course really interesting and the topics covered are SUPER useful and important for pretty much every other class, especially Algorithms. The provided lectures and material are pretty poor so make sure you do whatever is necessary to understand what's being talked about. The concepts covered in this class are fundamental to lots of programming so it's easy to find outside resources.",
     course_id: 6,
     difficulty: 3,
-    benefit: "Yes",
+    benefit: "4",
     time_spent: "1-3"
 )
 Review.create!(
     reviews_content: "The only concepts from C that you might not have covered in earlier classes were void pointers and function pointers - these will come up in the last quarter of the class. No need to do any specialized C prep. The most valuable things you can do to keep a good grade are (in order of importance): 1. Join a group early via slack, preferably before class starts. The students forming groups then will be the most motivated, and will help push you when you start getting lazy halfway through. 2. Create an implementation of each data structure from each worksheet along with unit tests. This will end up being a lot of work (10 hours per week, and more when doing AVL Trees/Heaps) since there are generally 5 worksheets per week. Your own C implementations internalize the structures/code so that you can answer questions on the exams that you might not have done before (if you don't Leetcode). Generally, exam coding questions will be something from the worksheets but with a twist. 3. Leetcode practice targeting each data structure is a fantastic supplement to the worksheets and their implementations - this will really help on the exam coding questions. It seems like it's easy to get a bad grade. Lots of students complained about the exam difficulty, but I'm not sure what kind of prep they did. I feel like doing these three things (and staying on it) helped earn an easy 97% final grade. ",
     course_id: 6,
     difficulty: 4,
-    benefit: "No",
+    benefit: "5",
     time_spent: "1-3"
 )
 puts "Reviews created for CS261"
+
+##### Reviews CS325 #####
+Review.create!(
+    reviews_content: "My instructor, Liang Huang, was quite awesome!",
+    course_id: 9,
+    difficulty: 5,
+    benefit: "5",
+    time_spent: "13-15"
+)
+
+Review.create!(
+    reviews_content: "I took this class with graduate students teacher in summer 2019. Although exam was not really hard, Instructor curved a lot for the exams. The assignments were mostly group assignment and it was easy at all.",
+    course_id: 9,
+    difficulty: 4,
+    benefit: "4",
+    time_spent: "10-12"
+)
+puts "Reviews created for CS325"
+
+##### Reviews CS344 #####
+Review.create!(
+    reviews_content: "I took this class at 2019 summer and I felt this class was extremely difficult. The instructor I took with was PHD student. His office hour was really helpful but his lecture was not. There were 4 assignments in total and I felt 3rd one and 4th assignment was extremelly hard. We really should start earlier to finish those 2 assignments.",
+    course_id: 11,
+    difficulty: 5,
+    benefit: "4",
+    time_spent: "13-15"
+)
+Review.create!(
+    reviews_content: "I took this class at fall2019 and I felt this class was super hard. The hardest class at OSU undergraduate class.",
+    course_id: 11,
+    difficulty: 5,
+    benefit: "3",
+    time_spent: "13-15"
+)
+puts "Reviews created for CS344"
+
+##### Reviews CS361 #####
+Review.create!(
+    reviews_content: "Took in summer 2019 with instructor. Assignments are entirely group projects and work with 4 to 5 students.",
+    course_id: 13,
+    difficulty: 2,
+    benefit: "4",
+    time_spent: "1-3"
+)
+puts "Reviews created for CS361"
+
+##### Reviews CS372 #####
+Review.create!(
+    reviews_content: "I took this course at fall 2019 with instructor Bill Pheil. Assignments were labs and we entirely need to use Wireshark and observe some values. There were also coding extra credit and we could choose the language for coding. Midterm and final was pretty hard especially for the calculator problems. Better to prepare a lot for it.",
+    course_id: 15,
+    difficulty: 4,
+    benefit: "4",
+    time_spent: "4-6"
+)
+puts "Reviews created for CS372"
