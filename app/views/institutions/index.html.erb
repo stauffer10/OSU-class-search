@@ -1,0 +1,23 @@
+<h1>Listing all Institutions</h1>
+<p><%= link_to "Submit a new Institution", new_institution_path %></p>
+
+<% @institutions.each do |institution| %>
+    <div class = "row">
+        <div class = "col-xs-8">
+            <div class = "well well-lg">
+                <div class = "institution-name-and-location">
+                    <% if institution.state? %>
+                        <%= link_to institution.name, institution_path(institution) %></td>
+                        - 
+                        <%= institution.city %>, <%= institution.state %>, <%= institution.country %>
+                    <% else %>
+                        <%= link_to institution.name, institution_path(institution) %></td>
+                        - 
+                        <%= institution.city %>, <%= institution.country %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
+

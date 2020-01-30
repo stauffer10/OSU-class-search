@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :courses
   resources :reviews
   resources :difficulties
+  resources :institutions
+
 
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
