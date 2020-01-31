@@ -33,7 +33,7 @@ class InstitutionsController < ApplicationController
     end
 
     def edit
-
+        @instituion = Institution.find(params[:id])
     end
 
     def update
@@ -56,7 +56,8 @@ class InstitutionsController < ApplicationController
             :name, 
             :city,
             :state,
-            :country
+            :country,
+            :logo
         )
     end 
 end
