@@ -22,6 +22,9 @@ class InstitutionsController < ApplicationController
 
     def show
        @instituion = Institution.find(params[:id])
+
+       #Generate list of courses for this instituion
+       # @courses = Course.where("institution_id = ?", params[:institution_id]) 
     end
 
     def destroy
