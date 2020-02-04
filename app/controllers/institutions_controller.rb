@@ -60,7 +60,8 @@ class InstitutionsController < ApplicationController
             :city,
             :state,
             :country,
-            :logo
+            :logo,
+            courses_attributes: [:coursename, :course_content, :prerequisite, :proctoredexams, :groupwork, :textbook]
         )
     end 
 end
