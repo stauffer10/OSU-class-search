@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :institutions
 
 
+
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
 

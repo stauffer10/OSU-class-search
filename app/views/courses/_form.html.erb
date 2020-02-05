@@ -1,5 +1,13 @@
 <%= render 'shared/errors', obj: @course %>
 
+<div align="center">
+    <% if @institution.logo.attached? %>
+        <img src="<%= (url_for(@institution.logo)) %>" alt="<%= @institution.name %> logo" width="700" height="300">
+    <% else %>
+        <h1><%= @institution.name %></h1>
+    <% end %>
+</div>
+
 <div class = "row">
     <div class = "col-xs-12">
         <%= form_with( model: @course, local: true, class: "form-horizontal") do |f| %>

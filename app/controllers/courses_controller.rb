@@ -7,6 +7,12 @@ class CoursesController < ApplicationController
     
     def new
         @course = Course.new
+
+            if params[:institution_id]
+                @course.institution_id = params[:institution_id]
+                @institution = Institution.find(params[:institution_id])
+            end
+
     end
 
     def create
@@ -80,7 +86,8 @@ class CoursesController < ApplicationController
             :prerequisite, 
             :proctoredexams, 
             :groupwork, 
-            :textbook, 
+            :textbook,
+            :institution_id, 
             reviews_attributes: [:reviews_content, :difficulty, :benefit, :time_spent],
         )
     end 
