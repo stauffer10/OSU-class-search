@@ -6,23 +6,23 @@ class CoursesController < ApplicationController
     end
     
     def new
-        @course = Course.new
+        @institution = Institution.find(params[:institution_id])
 
-            if params[:institution_id]
-                @course.institution_id = params[:institution_id]
-                @institution = Institution.find(params[:institution_id])
-            end
-
+        # must assign the course with a belong_to relationship with institution
+        @course = @institution.courses.new
+        @course.institution_id = params[:institution_id]
     end
 
     def create
         @course = Course.new(course_params)
-        @course.save
+        @course.save!
         if @course.save
-            flash[:success] = "New course has created"
+            flash[:success] = "New course has been created"
             redirect_to course_path(@course)
         else 
-            render 'new'
+            #render 'new'
+            flash[:error] = "Did not save"
+            redirect_to root_path
         end
     end
 
