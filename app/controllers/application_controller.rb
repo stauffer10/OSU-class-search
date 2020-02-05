@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     end
 
     def set_copyright
-        @copyright = CopyrightViewTool::Renderer.copyright 'Naohito Muraoka', 'All rights reserved'
+        @copyright = CopyrightViewTool::Renderer.copyright 'Pacific Software', 'All rights reserved'
     end
 end
 

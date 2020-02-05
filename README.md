@@ -12,4 +12,4 @@ https://osu-course-search.herokuapp.com/
 
 ## Author
 
-This project was created entirely by Naohito Muraoka by using ruby on rails with HTML, CSS, Javascript. I am looking for other developer to work both for improving this projects and for working with another projects using Ruby on Rails. 
+This project was started entirely by Naohito Muraoka, and was later augmented with contributions from Nathan Stauffer and Greg Doolittle. The site uses Ruby on Rails with HTML, CSS, Javascript. We are looking for other developers to work to improve this project, as well as other projects using Ruby on Rails.
