@@ -23,12 +23,19 @@ class ApplicationController < ActionController::Base
     def set_copyright
         @copyright = CopyrightViewTool::Renderer.copyright 'Pacific Software', 'All rights reserved'
     end
+
+    # def login
+    #     before_filter CASClient::Frameworks::Rails::Filter
+    # end
+    # def logout
+    #     CASClient::Frameworks::Rails::Filter.logout(self)
+    # end
 end
 
 module CopyrightViewTool
     class Renderer
         def self.copyright name, message
-            "&copy: #{Time.now.year} | <b>#{name}</b> #{message}".html_safe
+            "&copy#{Time.now.year} <b>#{name}</b> | #{message}.".html_safe
         end
     end
 end
