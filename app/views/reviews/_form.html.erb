@@ -1,23 +1,23 @@
 <%= render 'shared/errors', obj: @review %>
 
+<div align="center">
+    <% if @institution.logo.attached? %>
+        <img src="<%= (url_for(@institution.logo)) %>" alt="<%= @institution.name %> logo" width="700" height="300">
+    <% else %>
+        <h1><%= @institution.name %></h1>
+    <% end %>
+</div>
+
+<div class="well well-lg">
+    <h1 align="center"><%= @course.coursename %></h1>
+</div>
+
 <div class = "row">
     <div class = "col-xs-12">
         <%= form_with( model: @review, local: true, class: "form-horizontal") do |f| %>
 
-            <div class="form-group">
-                <div class = "control-label col-sm-2">
-                    <%= f.label :course_name %>
-                </div>
-                <div class = "col-sm-8">
-                    <%= f.collection_select(:course_id, Course.all, :id, :coursename,
-                                                {
-                                                include_blank: "Select Course name"
-                                                },
-                                                class: 'form-control'
-                                            )
-                    %>
-                </div>
-            </div>
+            <%= f.hidden_field :institution_id, :value => @institution.id %>
+            <%= f.hidden_field :course_id, :value => @course.id %>
 
             <div class = "form-group">
                 <div class = "control-label col-sm-2">

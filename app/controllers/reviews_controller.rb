@@ -6,14 +6,19 @@ class ReviewsController < ApplicationController
     end
     
     def new
-        @review = Review.new
+        @course = Course.find(params[:course_id])
+        @institution = Institution.find(params[:institution_id])
+
+        # must assign the review with a belong_to relationship with course
+        @review = @course.reviews.new
+        @review.course_id = params[:course_id]
     end
 
     def create
         @review = Review.new(review_params)
         @review.save
         if @review.save
-            flash[:success] = "New review has created"
+            flash[:success] = "New review has been created."
             redirect_to course_path(@review.course_id)
         else 
             render 'new'
@@ -29,7 +34,7 @@ class ReviewsController < ApplicationController
         @review.destroy
         
         flash[:danger] = "Review was deleted"
-        redirect_to review_path
+        redirect_to course_path(@review.course_id)
     end
 
     def edit

@@ -27,6 +27,8 @@ class CoursesController < ApplicationController
     end
 
     def show
+        @institution = Institution.find(@course.institution_id)
+
         # Retrieving difficuly score from nested attributes
         @score1 = @course.reviews.where(difficulty: 1).count
         @score2 = @course.reviews.where(difficulty: 2).count
@@ -75,6 +77,7 @@ class CoursesController < ApplicationController
     end
 
     private
+    
     def set_course
         @course = Course.find(params[:id])
     end
