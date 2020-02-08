@@ -13,3 +13,110 @@
  *= require_tree .
  *= require_self
  */
+
+$base-color: #d73f09;
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: $base-color;
+    &:focus,
+    &:hover {
+        color: darken($base-color, 12%);
+    }
+}
+.navbar {
+    border-radius: 0;
+    border: 0;
+    padding: 10px;
+    img {
+        margin-right: 20px;
+    }
+    @media only screen and (max-width: 600px) {
+        img {
+            margin-left: 25%;
+            width: 50%;
+        }
+    }
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background: darken($base-color, 10%);
+}
+.navbar-header button {
+    color: white;
+}
+.navbar-nav > li > .dropdown-menu {
+    background: $base-color;
+}
+.navbar-default .navbar-nav > .open {
+    a,
+    a:hover,
+    a:focus {
+        background: lighten($base-color, 10%);
+    }
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.jumbotron {
+    h1 {
+        color: darken($base-color, 18%);
+    }
+    p {
+        text-align: left;
+    }
+    @media only screen and (max-width: 600px) {
+        background: white;
+        p {
+            padding: 20px;
+            // min-height: 100vh;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 0 40px 80px 40px;
+        margin-top: -20px;
+    }
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: white;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: white;
+}
+.blog-footer {
+    background: lighten($base-color, 52%);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 0.05rem solid lighten($base-color, 40%);
+}
+
+.course-detail-title {
+    color: $base-color;
+}
+
+.rating {
+    font-size: 0.8em;
+}
+.btn-primary {
+    background: $base-color;
+    border: darken($base-color, 10%);
+    &:focus,
+    &:hover {
+        background: lighten($base-color, 14%);
+    }
+}
