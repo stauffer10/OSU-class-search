@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
         @review = Review.new(review_params)
         @review.save
         if @review.save
-            flash[:success] = "New review has created"
+            flash[:success] = "New review has been created"
             redirect_to course_path(@review.course_id)
         else 
             render 'new'
@@ -38,7 +38,7 @@ class ReviewsController < ApplicationController
 
     def update
         if @review.update(review_params)
-            flash[:success] = "Review was updated with reviews"
+            flash[:success] = "Review was updated"
             redirect_to review_path(@review)
         else
             render 'edit'
