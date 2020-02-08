@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   root 'pages#home'
   get 'about', to: 'pages#about'
   get 'new_reviews', to: 'courses#create_reviews'
@@ -6,6 +7,7 @@ Rails.application.routes.draw do
   resources :reviews
   resources :difficulties
   resources :institutions
+  resources :majors
 
 
 

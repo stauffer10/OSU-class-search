@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-    belongs_to :institution
+    belongs_to :major
 
     # courses are many side of one-to-many associations
     has_many :reviews, dependent: :destroy

@@ -10,7 +10,7 @@ class CoursesController < ApplicationController
 
         # must assign the course with a belong_to relationship with institution
         @course = @institution.courses.new
-        @course.institution_id = params[:institution_id]
+        #@course.institution_id = params[:institution_id]
     end
 
     def create

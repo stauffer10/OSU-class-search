@@ -24,7 +24,7 @@ class InstitutionsController < ApplicationController
        @instituion = Institution.find(params[:id])
 
        #Generate list of courses for this instituion
-       @courses = Course.where("institution_id = ?", params[:institution_id]) 
+       #@courses = Course.where("institution_id = ?", params[:institution_id]) 
     end
 
     def destroy
@@ -61,7 +61,7 @@ class InstitutionsController < ApplicationController
             :state,
             :country,
             :logo,
-            courses_attributes: [:coursename, :course_content, :prerequisite, :proctoredexams, :groupwork, :textbook]
+            majors_attributes: [:majorname, :description, :institution_id]
         )
     end 
 end

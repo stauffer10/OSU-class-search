@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_01_044359) do
+ActiveRecord::Schema.define(version: 2020_02_08_182500) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2020_02_01_044359) do
     t.string "groupwork"
     t.string "textbook"
     t.integer "institution_id"
+    t.integer "major_id"
   end
 
   create_table "institutions", force: :cascade do |t|
@@ -55,6 +56,14 @@ ActiveRecord::Schema.define(version: 2020_02_01_044359) do
     t.text "logo"
   end
 
+  create_table "majors", force: :cascade do |t|
+    t.string "majorname"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "institution_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.text "reviews_content"
     t.datetime "created_at", null: false
@@ -63,6 +72,8 @@ ActiveRecord::Schema.define(version: 2020_02_01_044359) do
     t.integer "difficulty"
     t.string "benefit"
     t.string "time_spent"
+    t.integer "major_id"
+    t.integer "institution_id"
   end
 
   create_table "users", force: :cascade do |t|
