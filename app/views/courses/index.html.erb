@@ -1,13 +1,22 @@
 
 
 <% @courses.each do |course| %>
-    <div class = "row">
-        <div class = "col-xs-8" col-xs-offset-2">
-            <div class = "well well-lg>
-                <div class = "course-title">
+    <div class="row">
+        <div class="col-xs-8" col-xs-offset-2">
+            <div class="well well-lg">
+                <div class="course-title">
                     <%= link_to course.coursename, course_path(course) %></td>
+                    <span class="rating">
+                        <nobr>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                            <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                        </nobr>
+                    </span>
                 </div>
-                <div class = "course-body">
+                <div class="course-body">
                     <%= truncate(course.course_content, length: 100) %></td>
                 </div>
             </div>
