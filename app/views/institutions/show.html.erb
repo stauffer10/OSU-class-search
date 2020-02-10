@@ -1,0 +1,66 @@
+
+<div align="center">
+  <% if @institution.logo.attached? %>
+    <img src="<%= (url_for(@institution.logo)) %>" alt="<%= @institution.name %> logo" width="700" height="300">
+  <% end %>
+</div>
+
+<div class = "well well-lg">
+  <h1 align="center"><%= @instituion.name %></h1>
+  <% if @institution.state? %>
+    <h3 align="center"><%= @institution.city %>, <%= @institution.state %>, <%= @institution.country %></h2>
+  <% else %>
+    <h3 align="center"><%= @institution.city %>, <%= @institution.country %></h2>
+  <% end %>
+</div>
+
+<!-- DISABLE AUTHENTIFICATION FOR LOCAL DEVELOPMENT -->
+
+<%
+=begin %>
+<!--
+<div class = "institution-actions">
+    <% if logged_in? %> 
+        <% if current_user.admin? %>
+            <%= link_to 'Edit Institution', edit_institution_path(@institution), class: "btn btn-xs btn-primary" %>
+            <%= link_to 'Delete Institution', institution_path(@institution), method: :delete, data: {confirm: "Are you sure you want to delete the institution?"}, class: "btn btn-xs btn-danger" %>
+        <% end %> 
+    <% end %>  
+</div>
+-->
+<%
+=end %>
+
+
+<!-- NO AUTHENTICATION FOR LOCAL DEVELOPMENT -->
+
+
+<div class = "institution-actions">   
+  <%= link_to 'Edit Institution', edit_institution_path(@institution), class: "btn btn-xs btn-primary" %>
+  <%= link_to 'Delete Institution', institution_path(@institution), method: :delete, data: {confirm: "Are you sure you want to delete the institution?"}, class: "btn btn-xs btn-danger" %>
+</div>
+
+
+
+<div class = "well well-lg">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">List of Majors<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <% @institution.majors.each do |m| %>
+              <li><%= link_to "#{m.majorname}", major_path(m) %></li>
+            <% end %>   
+          </ul>
+        </li>
+      </ul>
+  </div>
+</div>
+
+<div class = "well well-lg">
+  <%= link_to 'Create a New Major', new_major_path(institution_id: @institution.id) %>
+</div>
+
+
+
+

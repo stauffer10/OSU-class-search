@@ -6,21 +6,29 @@ class CoursesController < ApplicationController
     end
     
     def new
-        @course = Course.new
+        @institution = Institution.find(params[:institution_id])
+
+        # must assign the course with a belong_to relationship with institution
+        @course = @institution.courses.new
+        #@course.institution_id = params[:institution_id]
     end
 
     def create
         @course = Course.new(course_params)
-        @course.save
+        @course.save!
         if @course.save
             flash[:success] = "New course has been created"
             redirect_to course_path(@course)
         else 
-            render 'new'
+            #render 'new'
+            flash[:error] = "Did not save"
+            redirect_to root_path
         end
     end
 
     def show
+        @institution = Institution.find(@course.institution_id)
+
         # Retrieving difficuly score from nested attributes
         @score1 = @course.reviews.where(difficulty: 1).count
         @score2 = @course.reviews.where(difficulty: 2).count
@@ -69,6 +77,7 @@ class CoursesController < ApplicationController
     end
 
     private
+    
     def set_course
         @course = Course.find(params[:id])
     end
@@ -80,7 +89,8 @@ class CoursesController < ApplicationController
             :prerequisite, 
             :proctoredexams, 
             :groupwork, 
-            :textbook, 
+            :textbook,
+            :institution_id, 
             reviews_attributes: [:reviews_content, :difficulty, :benefit, :time_spent],
         )
     end 

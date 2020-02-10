@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_24_022327) do
+ActiveRecord::Schema.define(version: 2020_02_08_205953) do
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.integer "record_id", null: false
+    t.integer "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "coursename"
@@ -21,6 +42,26 @@ ActiveRecord::Schema.define(version: 2019_12_24_022327) do
     t.string "proctoredexams"
     t.string "groupwork"
     t.string "textbook"
+    t.integer "institution_id"
+    t.integer "major_id"
+  end
+
+  create_table "institutions", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.string "state"
+    t.string "country"
+    t.string "city"
+    t.text "logo"
+  end
+
+  create_table "majors", force: :cascade do |t|
+    t.string "majorname"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "institution_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -31,6 +72,8 @@ ActiveRecord::Schema.define(version: 2019_12_24_022327) do
     t.integer "difficulty"
     t.string "benefit"
     t.string "time_spent"
+    t.integer "major_id"
+    t.integer "institution_id"
   end
 
   create_table "users", force: :cascade do |t|

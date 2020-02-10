@@ -1,12 +1,21 @@
 <%= render 'shared/errors', obj: @course %>
 
-<div class="row">
-    <div class="col-xs-12">
+<div align="center">
+    <% if @institution.logo.attached? %>
+        <img src="<%= (url_for(@institution.logo)) %>" alt="<%= @institution.name %> logo" width="700" height="300">
+    <% else %>
+        <h1><%= @institution.name %></h1>
+    <% end %>
+</div>
+
+<div class = "row">
+    <div class = "col-xs-12">
         <%= form_with( model: @course, local: true, class: "form-horizontal") do |f| %>
         
-        
-            <div class="form-group">
-                <div class="control-label col-sm-2">
+            <%= f.hidden_field :institution_id, :value => @institution.id %>
+
+            <div class = "form-group">
+                <div class = "control-label col-sm-2">
                     <%= f.label :coursename %>
                 </div>
 
@@ -14,6 +23,10 @@
                     <%= f.text_field :coursename, class: "form-control", placeholder: "Name of class", autofocus: true %>
                 </div>
             </div>
+
+            <div class = "form-group">
+                <div class = "control-label col-sm-2">
+                    <%= f.label :course_content %>
 
             <div class="form-group">
                 <div class="control-label col-sm-2">

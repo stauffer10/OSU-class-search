@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  
   root 'pages#home'
   get 'about', to: 'pages#about'
   get 'new_reviews', to: 'courses#create_reviews'
   resources :courses
   resources :reviews
   resources :difficulties
+  resources :institutions
+  resources :majors
+
+
 
   get 'signup', to: 'users#new'
   resources :users, except: [:new]

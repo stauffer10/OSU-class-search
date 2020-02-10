@@ -1,0 +1,57 @@
+<div align="center">
+    <% if @institution.logo.attached? %>
+        <img src="<%= (url_for(@institution.logo)) %>" alt="<%= @institution.name %> logo" width="700" height="300">
+    <% else %>
+        <h1 align="center"><%= @institution.name %></h1>
+        <% if @institution.state? %>
+            <h3 align="center"><%= @institution.city %>, <%= @institution.state %>, <%= @institution.country %></h2>
+        <% else %>
+            <h3 align="center"><%= @institution.city %>, <%= @institution.country %></h2>
+        <% end %>
+    <% end %>
+</div>
+
+<h2 align="center">Major: <%= @major.majorname %></h2>
+
+<div class = "well col-xs-8 col-xs-offset-2">
+    <h4 class = "center description"><strong style="color:blue;">Major Description:</strong></h4>
+    <p align="center"><%= @major.description %></p>
+
+    <div class = "major-actions">
+
+<!-- DISABLE AUTHENTICATION FOR LOCAL DEVELOPMENT -->
+
+<% 
+=begin %>
+    <!--
+   
+    <% if logged_in? %> 
+        <% if current_user.admin? %>
+            <%= link_to 'Edit major', edit_major_path(@major), class: "btn btn-xs btn-primary" %>
+            <%= link_to 'Show major', majors_path(@major), class: "btn btn-xs btn-success" %>
+            <%= link_to 'Delete major', major_path(@major), method: :delete, data: {confirm: "Are you sure you want to delete the major?"}, class: "btn btn-xs btn-danger" %>
+        <% else %>
+            <%= link_to 'All majors', majors_path(@major), class: "btn btn-xs btn-primary" %>
+            <%= link_to 'Create courses', new_course_path, class: "btn btn-xs btn-success" %>
+        <% end %> 
+    <% end %> 
+    
+    -->
+<% 
+=end %>
+
+
+<!-- ENABLE FUNCTIONALITY FOR LOCAL DEVELOPMENT --->
+  
+        
+        <%= link_to 'Edit major', edit_major_path(@major), class: "btn btn-xs btn-primary" %>
+        <%= link_to 'Show major', majors_path(@major), class: "btn btn-xs btn-success" %>
+        <%= link_to 'Delete major', major_path(@major), method: :delete, data: {confirm: "Are you sure you want to delete the major?"}, class: "btn btn-xs btn-danger" %>
+    
+        <%= link_to 'All majors', majors_path(@major), class: "btn btn-xs btn-primary" %>
+        <%= link_to 'Create courses', new_course_path(major_id: @major.id, institution_id: @institution.id), class: "btn btn-xs btn-success" %>
+          
+
+
+    </div>
+</div>
