@@ -38,14 +38,16 @@ Institution.create!(
     state: "Oregon",
     country: "United States",
     city: "Corvallis",
-    logo: "https://communications.oregonstate.edu/sites/communications.oregonstate.edu/files/osu-primarylogo-2-compressor.jpg"
+    logo: "assets/images/OSU-Logo.jpg"
 )
+puts "1 institution created"
 
 Major.create!(
     majorname: "Computer Science",
     description: "Computer Science",
     institution_id: 1
 )
+puts "1 major created"
 
 ##### Courses #####
 Course.create!(
