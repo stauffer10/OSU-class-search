@@ -32,6 +32,21 @@ User.create!(
 puts "1 regular user created"
 ##### Users #####
 
+##### Institutions #####
+Institution.create!(
+    name: "Oregon State University",
+    state: "Oregon",
+    country: "United States",
+    city: "Corvallis",
+    logo: "https://communications.oregonstate.edu/sites/communications.oregonstate.edu/files/osu-primarylogo-2-compressor.jpg"
+)
+
+Major.create!(
+    majorname: "Computer Science",
+    description: "Computer Science",
+    institution_id: 1
+)
+
 ##### Courses #####
 Course.create!(
     coursename: "CS160 - Computer Science Orientation",
@@ -39,7 +54,9 @@ Course.create!(
     prerequisite: "None",
     proctoredexams: "None",
     groupwork: "None",
-    textbook: "None"
+    textbook: "None",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -48,7 +65,9 @@ Course.create!(
     prerequisite: "None",
     proctoredexams: "Yes",
     groupwork: "None",
-    textbook: "Starting Out with C++: Early Objects (9th edition)"
+    textbook: "Starting Out with C++: Early Objects (9th edition)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -57,7 +76,9 @@ Course.create!(
     prerequisite: "CS161",
     proctoredexams: "No",
     groupwork: "One group project halfway through the quarter where a team of about 5 students implements a given program in C++",
-    textbook: "Starting Out with C++: Early Objects (9th edition)"
+    textbook: "Starting Out with C++: Early Objects (9th edition)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -66,7 +87,9 @@ Course.create!(
     prerequisite: "None",
     proctoredexams: "Yes",
     groupwork: "Two small group projects in which you compare your work on a previous assignment and decide whose was best and explain why.",
-    textbook: "Starting Out with C++: Early Objects (9th edition)"
+    textbook: "Starting Out with C++: Early Objects (9th edition)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -75,7 +98,9 @@ Course.create!(
     prerequisite: "None",
     proctoredexams: "Yes",
     groupwork: "None",
-    textbook: "Discrete Mathematics with Applications (4th edition)"
+    textbook: "Discrete Mathematics with Applications (4th edition)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -84,7 +109,9 @@ Course.create!(
     prerequisite: "CS162 or CS165 and CS225",
     proctoredexams: "Yes",
     groupwork: "Weekly worksheets to complete and discuss in a small group. Must submit typed 'meeting minutes' to Piazza each week.",
-    textbook: "C Programming Language (2nd edition)"
+    textbook: "C Programming Language (2nd edition)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -93,7 +120,9 @@ Course.create!(
     prerequisite: "CS161 or CS165",
     proctoredexams: "Yes",
     groupwork: "None",
-    textbook: "Assembly Language for x86 Processors (7th edition)"
+    textbook: "Assembly Language for x86 Processors (7th edition)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -102,7 +131,9 @@ Course.create!(
     prerequisite: "CS162 or CS165",
     proctoredexams: "Yes",
     groupwork: "None",
-    textbook: "Eloquent JavaScript, 2nd Ed.: A Modern Introduction to Programming (2nd edition)"
+    textbook: "Eloquent JavaScript, 2nd Ed.: A Modern Introduction to Programming (2nd edition)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -111,7 +142,9 @@ Course.create!(
     prerequisite: "CS261 or CS225",
     proctoredexams: "Yes",
     groupwork: "Graded weekly Canvas discussions in a small group and a 3-person group project the last two weeks of the quarter. Students can choose their group mates for the final project or elect to be placed in a random group.",
-    textbook: "Introduction to Algorithms, 3rd Edition (MIT Press)"
+    textbook: "Introduction to Algorithms, 3rd Edition (MIT Press)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -120,7 +153,9 @@ Course.create!(
     prerequisite: "CS290",
     proctoredexams: "Yes",
     groupwork: "Final project is fairly involved and allows you to choose a partner (optional)",
-    textbook: "Course Materials"
+    textbook: "Course Materials",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -129,7 +164,9 @@ Course.create!(
     prerequisite: "CS261 or CS271",
     proctoredexams: "None",
     groupwork: "None",
-    textbook: "Course Materials"
+    textbook: "Course Materials",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -138,7 +175,9 @@ Course.create!(
     prerequisite: "CS161 or CS165",
     proctoredexams: "No midterm, proctored final",
     groupwork: "The whole class is a group project where you work in groups of 4 to complete weekly writing and UI mockup assignments.",
-    textbook: "Interaction Design: Beyond Human-Computer Interaction (4th edition)"
+    textbook: "Interaction Design: Beyond Human-Computer Interaction (4th edition)",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -147,7 +186,9 @@ Course.create!(
     prerequisite: "CS261",
     proctoredexams: "Yes",
     groupwork: "Almost exclusively group work. Work in a team of 5 to prepare weekly written reports about the software development lifecycle.",
-    textbook: "Course materials"
+    textbook: "Course materials",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -156,7 +197,9 @@ Course.create!(
     prerequisite: "CS261",
     proctoredexams: "None",
     groupwork: "Two group assignments and you can form your own groups.",
-    textbook: "Course materials"
+    textbook: "Course materials",
+    institution_id: 1,
+    major_id: 1
 )
 
 Course.create!(
@@ -165,7 +208,9 @@ Course.create!(
     prerequisite: "CS261 and CS271",
     proctoredexams: "None",
     groupwork: "None",
-    textbook: "Computer Networking: A Top-Down Approach (7th edition)"
+    textbook: "Computer Networking: A Top-Down Approach (7th edition)",
+    institution_id: 1,
+    major_id: 1
 )
 Course.create!(
     coursename: "CS373 - Defense Against the Dark Arts",
@@ -173,7 +218,9 @@ Course.create!(
     prerequisite: "CS344 and CS340 and CS372",
     proctoredexams: "None",
     groupwork: "None",
-    textbook: "Course materials"
+    textbook: "Course materials",
+    institution_id: 1,
+    major_id: 1
 )
 Course.create!(
     coursename: "CS464 - Open Source Software",
@@ -181,7 +228,9 @@ Course.create!(
     prerequisite: "CS261 or CS361",
     proctoredexams: "Yes",
     groupwork: "Mandatory discussions and a few peer-reviews where you critique other students' posts",
-    textbook: "Course materials"
+    textbook: "Course materials",
+    institution_id: 1,
+    major_id: 1
 )
 Course.create!(
     coursename: "CS467 - Online Capstone Project",
@@ -189,7 +238,9 @@ Course.create!(
     prerequisite: "CS344, CS361, and CS362",
     proctoredexams: "None",
     groupwork: "This entire course is a group project",
-    textbook: "Course materials"
+    textbook: "Course materials",
+    institution_id: 1,
+    major_id: 1
 )
 Course.create!(
     coursename: "CS475 - Intro to Parallel Programming",
@@ -197,7 +248,9 @@ Course.create!(
     prerequisite: "CS261",
     proctoredexams: "Yes",
     groupwork: "None",
-    textbook: "Course materials"
+    textbook: "Course materials",
+    institution_id: 1,
+    major_id: 1
 )
 Course.create!(
     coursename: "CS493 - Cloud Application Development",
@@ -205,7 +258,9 @@ Course.create!(
     prerequisite: "CS290 and CS340 and CS372",
     proctoredexams: "Yes",
     groupwork: "None",
-    textbook: "Course materials"
+    textbook: "Course materials",
+    institution_id: 1,
+    major_id: 1
 )
 Course.create!(
     coursename: "CS496 - Mobile and Cloud Software Development",
@@ -213,7 +268,9 @@ Course.create!(
     prerequisite: "CS344",
     proctoredexams: "None",
     groupwork: "None",
-    textbook: "Course materials"
+    textbook: "Course materials",
+    institution_id: 1,
+    major_id: 1
 )
 puts "All course created"
 ##### Courses #####
@@ -224,7 +281,9 @@ Review.create!(
     course_id: 1,
     difficulty: 2,
     benefit: "1",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -232,7 +291,9 @@ Review.create!(
     course_id: 1,
     difficulty: 3,
     benefit: "2",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -240,7 +301,9 @@ Review.create!(
     course_id: 1,
     difficulty: 3,
     benefit: "3",
-    time_spent: "7-9"
+    time_spent: "7-9",
+    major_id: 1,
+    institution_id: 1
 )
 
 ##### Reviews CS161 #####
@@ -249,7 +312,9 @@ Review.create!(
     course_id: 2,
     difficulty: 1,
     benefit: "4",
-    time_spent: "1-3"
+    time_spent: "1-3",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -257,7 +322,9 @@ Review.create!(
     course_id: 2,
     difficulty: 1,
     benefit: "4",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -265,7 +332,9 @@ Review.create!(
     course_id: 2,
     difficulty: 2,
     benefit: "4",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -273,7 +342,9 @@ Review.create!(
     course_id: 2,
     difficulty: 2,
     benefit: "5",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -281,7 +352,9 @@ Review.create!(
     course_id: 2,
     difficulty: 2,
     benefit: "5",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -289,7 +362,9 @@ Review.create!(
     course_id: 2,
     difficulty: 3,
     benefit: "5",
-    time_spent: "7-9"
+    time_spent: "7-9",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -297,7 +372,9 @@ Review.create!(
     course_id: 2,
     difficulty: 3,
     benefit: "3",
-    time_spent: "7-9"
+    time_spent: "7-9",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -305,7 +382,9 @@ Review.create!(
     course_id: 2,
     difficulty: 3,
     benefit: "3",
-    time_spent: "10-12"
+    time_spent: "10-12",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -313,7 +392,9 @@ Review.create!(
     course_id: 2,
     difficulty: 4,
     benefit: "3",
-    time_spent: "10-12"
+    time_spent: "10-12",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -321,7 +402,9 @@ Review.create!(
     course_id: 2,
     difficulty: 1,
     benefit: "3",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS161"
 
@@ -331,7 +414,9 @@ Review.create!(
     course_id: 3,
     difficulty: 2,
     benefit: "3",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -339,7 +424,9 @@ Review.create!(
     course_id: 3,
     difficulty: 3,
     benefit: "3",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -347,7 +434,9 @@ Review.create!(
     course_id: 3,
     difficulty: 3,
     benefit: "3",
-    time_spent: "7-9"
+    time_spent: "7-9",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -355,7 +444,9 @@ Review.create!(
     course_id: 3,
     difficulty: 4,
     benefit: "3",
-    time_spent: "10-12"
+    time_spent: "10-12",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -363,7 +454,9 @@ Review.create!(
     course_id: 3,
     difficulty: 4,
     benefit: "4",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -371,7 +464,9 @@ Review.create!(
     course_id: 3,
     difficulty: 4,
     benefit: "4",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -379,7 +474,9 @@ Review.create!(
     course_id: 3,
     difficulty: 4,
     benefit: "4",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -387,7 +484,9 @@ Review.create!(
     course_id: 3,
     difficulty: 5,
     benefit: "5",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -395,7 +494,9 @@ Review.create!(
     course_id: 3,
     difficulty: 5,
     benefit: "5",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -403,7 +504,9 @@ Review.create!(
     course_id: 2,
     difficulty: 5,
     benefit: "5",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS162"
 
@@ -413,7 +516,9 @@ Review.create!(
     course_id: 4,
     difficulty: 2,
     benefit: "3",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -421,7 +526,9 @@ Review.create!(
     course_id: 4,
     difficulty: 2,
     benefit: "4",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -429,7 +536,9 @@ Review.create!(
     course_id: 4,
     difficulty: 3,
     benefit: "5",
-    time_spent: "1-3"
+    time_spent: "1-3",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS165"
 
@@ -439,21 +548,27 @@ Review.create!(
     course_id: 5,
     difficulty: 2,
     benefit: "2",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 Review.create!(
     reviews_content: "I came in with an unusual level of preparation for this course, so I'm not the best judge of difficulty. The structure (two weekly assignments, weekly 2-hour quiz, bi-weekly discussion post) means that all students will spend a lot of time on this course. Most of my classmates who took both 161 and 225 spent at least 80% of their school time on 225. The grading is extremely lenient overall, rewarding effort and attempts with large partial credit allocations. The professor was extremely present on Slack and Piazza both, and she seemed to be working hard to answer questions posed by students. Please ask your questions on Piazza and Slack. (And, goodness gracious, please understand that 'Anonymous' posts on Piazza are only anonymous from the students -- the instructor and TAs know who posted what.)",
     course_id: 5,
     difficulty: 2,
     benefit: "4",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 Review.create!(
     reviews_content: "Use outside resources especially on topics before the midterm. Make sure you understand homework and quizzes prior to midterm and final. Keep on top of the material as it is easy to fall behind. ",
     course_id: 5,
     difficulty: 3,
     benefit: "4",
-    time_spent: "7-9-"
+    time_spent: "7-9-",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS225"
 
@@ -463,21 +578,27 @@ Review.create!(
     course_id: 6,
     difficulty: 3,
     benefit: "3",
-    time_spent: "1-3"
+    time_spent: "1-3",
+    major_id: 1,
+    institution_id: 1
 )
 Review.create!(
     reviews_content: "I found this course really interesting and the topics covered are SUPER useful and important for pretty much every other class, especially Algorithms. The provided lectures and material are pretty poor so make sure you do whatever is necessary to understand what's being talked about. The concepts covered in this class are fundamental to lots of programming so it's easy to find outside resources.",
     course_id: 6,
     difficulty: 3,
     benefit: "4",
-    time_spent: "1-3"
+    time_spent: "1-3",
+    major_id: 1,
+    institution_id: 1
 )
 Review.create!(
     reviews_content: "The only concepts from C that you might not have covered in earlier classes were void pointers and function pointers - these will come up in the last quarter of the class. No need to do any specialized C prep. The most valuable things you can do to keep a good grade are (in order of importance): 1. Join a group early via slack, preferably before class starts. The students forming groups then will be the most motivated, and will help push you when you start getting lazy halfway through. 2. Create an implementation of each data structure from each worksheet along with unit tests. This will end up being a lot of work (10 hours per week, and more when doing AVL Trees/Heaps) since there are generally 5 worksheets per week. Your own C implementations internalize the structures/code so that you can answer questions on the exams that you might not have done before (if you don't Leetcode). Generally, exam coding questions will be something from the worksheets but with a twist. 3. Leetcode practice targeting each data structure is a fantastic supplement to the worksheets and their implementations - this will really help on the exam coding questions. It seems like it's easy to get a bad grade. Lots of students complained about the exam difficulty, but I'm not sure what kind of prep they did. I feel like doing these three things (and staying on it) helped earn an easy 97% final grade. ",
     course_id: 6,
     difficulty: 4,
     benefit: "5",
-    time_spent: "1-3"
+    time_spent: "1-3",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS261"
 
@@ -487,7 +608,9 @@ Review.create!(
     course_id: 9,
     difficulty: 5,
     benefit: "5",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 
 Review.create!(
@@ -495,7 +618,9 @@ Review.create!(
     course_id: 9,
     difficulty: 4,
     benefit: "4",
-    time_spent: "10-12"
+    time_spent: "10-12",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS325"
 
@@ -505,14 +630,18 @@ Review.create!(
     course_id: 11,
     difficulty: 5,
     benefit: "4",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 Review.create!(
     reviews_content: "I took this class at fall2019 and I felt this class was super hard. The hardest class at OSU undergraduate class.",
     course_id: 11,
     difficulty: 5,
     benefit: "3",
-    time_spent: "13-15"
+    time_spent: "13-15",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS344"
 
@@ -522,7 +651,9 @@ Review.create!(
     course_id: 13,
     difficulty: 2,
     benefit: "4",
-    time_spent: "1-3"
+    time_spent: "1-3",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS361"
 
@@ -532,6 +663,8 @@ Review.create!(
     course_id: 15,
     difficulty: 4,
     benefit: "4",
-    time_spent: "4-6"
+    time_spent: "4-6",
+    major_id: 1,
+    institution_id: 1
 )
 puts "Reviews created for CS372"
