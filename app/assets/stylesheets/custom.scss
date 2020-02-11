@@ -1,5 +1,5 @@
-$navbar-default-bg: black;
-//$navbar-default-bg: black;
+$base-color: #d73f09;
+$navbar-default-bg: $base-color;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -111,4 +111,3 @@ $navbar-default-bg: black;
 li {
     list-style: none;
 }
-

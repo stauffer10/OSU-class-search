@@ -1,9 +1,9 @@
 <div class="form-group">
             <%= f.fields_for :reviews do |rf| %>
-                <div class = "control-label col-sm-2">
+                <div class="control-label col-sm-2">
                     <%= rf.label :reviews %>
                 </div>
-                <div class = "col-sm-8">
+                <div class="col-sm-8">
                     <%= rf.text_field :reviews_content, class: "form-control", placeholder: "Leave the reviews", autofocus: true %>
                 </div>
                 <hr>
