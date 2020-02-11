@@ -32,22 +32,28 @@ User.create!(
 puts "1 regular user created"
 ##### Users #####
 
-##### Institutions #####
-Institution.create!(
+##### Institutions ######
+@inst = Institution.new(
     name: "Oregon State University",
-    state: "Oregon",
-    country: "United States",
-    city: "Corvallis",
-    logo: "assets/images/OSU-Logo.jpg"
+    state: "OR",
+    country: "USA",
+    city: "Corvallis"
 )
+@inst.logo.attach(io: File.open('app/assets/images/osu-logo.jpg'), filename: 'osu-logo.jpg', content_type: 'image/jpg')
+@inst.id = 1
+@inst.save!
 puts "1 institution created"
+##### Institutions #####
 
-Major.create!(
+##### Majors #####
+@maj = Major.create!(
     majorname: "Computer Science",
-    description: "Computer Science",
+    description: "Computer science is the study of algorithms and problem solving",
     institution_id: 1
 )
+@maj.id = 1
 puts "1 major created"
+##### Majors #####
 
 ##### Courses #####
 Course.create!(
@@ -274,7 +280,7 @@ Course.create!(
     institution_id: 1,
     major_id: 1
 )
-puts "All course created"
+puts "All courses created"
 ##### Courses #####
 
 ##### Reviews CS160 #####
