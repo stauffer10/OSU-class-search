@@ -15,8 +15,8 @@
 
 <h2 align="center">Course Title: <%= @course.coursename %></h2>
 
-<div class = "well col-xs-8 col-xs-offset-2">
-    <h4 class = "center description"><strong style="color:blue;">Course Detail:</strong></h4>
+<div class="well col-xs-8 col-xs-offset-2">
+    <h4 class="center description"><strong style="color:blue;">Course Detail:</strong></h4>
     <hr>
     <%= simple_format(@course.course_content) %>
     <li>Pre-requisite courses: <%= @course.prerequisite %></li>
@@ -24,7 +24,7 @@
     <li>Group Work: <%= @course.groupwork %></li>
     <li>Textbook: <%= @course.textbook %></li>
 
-    <div class = "course-actions">
+    <div class="course-actions">
 
 <!-- DISABLE AUTHENTICATION FOR LOCAL DEVELOPMENT -->
 
@@ -62,7 +62,7 @@
     </div>
 </div>
 
-<div class = "col-md-6">
+<div class="col-md-6">
     <h2>Reviews from other students</h2>
     <% @course.reviews.each do |i| %>
         <ul class="nav nav-tabs nav-stacked col-md-12 col-lg-12 col-sm-12 well ng-scope">
@@ -73,7 +73,7 @@
     </ul>
 </div>
 
-<div class = "col-md-6">
+<div class="col-md-6">
     <h2 align="center">Challenging Scores</h2>
     <%= pie_chart @challenge_score %>
 

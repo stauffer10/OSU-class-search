@@ -1,12 +1,12 @@
 
 <% @reviews.each do |review| %>
-    <div class = "row">
-        <div class = "col-xs-8" col-xs-offset-2">
-            <div class = "well well-lg">
-                <div class = "course-title">
+    <div class="row">
+        <div class="col-xs-8" col-xs-offset-2">
+            <div class="well well-lg">
+                <div class="course-title">
                     <%= link_to review.course_id, review_path(review) %></td>
                 </div>
-                <div class = "course-body">
+                <div class="course-body">
                     <%= truncate(review.reviews_content, length: 100) %></td>
                 </div>
                 <%= link_to 'Edit', edit_review_path(review), class: "btn btn-xs btn-primary" %>
