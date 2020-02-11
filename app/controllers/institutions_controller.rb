@@ -32,7 +32,7 @@ class InstitutionsController < ApplicationController
         @institution.destroy
         
         flash[:danger] = "institution was deleted"
-        redirect_to institutions_path
+        redirect_to root_path
     end
 
     def edit

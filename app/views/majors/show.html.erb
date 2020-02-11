@@ -13,45 +13,59 @@
 
 <h2 align="center">Major: <%= @major.majorname %></h2>
 
-<div class = "well col-xs-8 col-xs-offset-2">
+<div class = "well well-lg">
     <h4 class = "center description"><strong style="color:blue;">Major Description:</strong></h4>
     <p align="center"><%= @major.description %></p>
 
-    <div class = "major-actions">
+    <div class = "major-actions">        
+        <%= link_to 'Edit major', edit_major_path(@major), class: "btn btn-xs btn-primary" %>
+        <%= link_to 'Delete major', major_path(@major), method: :delete, data: {confirm: "Are you sure you want to delete the major?"}, class: "btn btn-xs btn-danger" %>    
+    </div>
+
+</div>
+
+
 
 <!-- DISABLE AUTHENTICATION FOR LOCAL DEVELOPMENT -->
 
 <% 
 =begin %>
-    <!--
-   
+<!--
+<div class = "major-actions">  
     <% if logged_in? %> 
         <% if current_user.admin? %>
             <%= link_to 'Edit major', edit_major_path(@major), class: "btn btn-xs btn-primary" %>
-            <%= link_to 'Show major', majors_path(@major), class: "btn btn-xs btn-success" %>
             <%= link_to 'Delete major', major_path(@major), method: :delete, data: {confirm: "Are you sure you want to delete the major?"}, class: "btn btn-xs btn-danger" %>
-        <% else %>
-            <%= link_to 'All majors', majors_path(@major), class: "btn btn-xs btn-primary" %>
-            <%= link_to 'Create courses', new_course_path, class: "btn btn-xs btn-success" %>
         <% end %> 
     <% end %> 
-    
-    -->
+</div>
+-->
 <% 
 =end %>
 
 
 <!-- ENABLE FUNCTIONALITY FOR LOCAL DEVELOPMENT --->
   
-        
-        <%= link_to 'Edit major', edit_major_path(@major), class: "btn btn-xs btn-primary" %>
-        <%= link_to 'Show major', majors_path(@major), class: "btn btn-xs btn-success" %>
-        <%= link_to 'Delete major', major_path(@major), method: :delete, data: {confirm: "Are you sure you want to delete the major?"}, class: "btn btn-xs btn-danger" %>
-    
-        <%= link_to 'All majors', majors_path(@major), class: "btn btn-xs btn-primary" %>
-        <%= link_to 'Create courses', new_course_path(major_id: @major.id, institution_id: @institution.id), class: "btn btn-xs btn-success" %>
-          
+<br />
 
-
-    </div>
+<div class = "well well-lg">
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">List of Courses<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <% @major.courses.each do |c| %>
+              <li><%= link_to "#{c.coursename}", course_path(c) %></li>
+            <% end %>   
+          </ul>
+        </li>
+      </ul>
+  </div>
 </div>
+
+<div class = "well well-lg">
+  <%= link_to 'Create a New Course', new_course_path(institution_id: @institution.id, major_id: @major.id) %>
+</div>
+
+
+

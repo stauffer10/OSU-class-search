@@ -17,6 +17,7 @@
         <%= form_with( model: @review, local: true, class: "form-horizontal") do |f| %>
 
             <%= f.hidden_field :institution_id, :value => @institution.id %>
+            <%= f.hidden_field :major_id, :value => @major.id %>
             <%= f.hidden_field :course_id, :value => @course.id %>
 
             <div class = "form-group">

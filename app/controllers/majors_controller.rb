@@ -19,6 +19,7 @@ class MajorsController < ApplicationController
 
   # GET /majors/1/edit
   def edit
+    @institution = Institution.find(@major.institution_id)
   end
 
   # POST /majors
@@ -47,10 +48,11 @@ class MajorsController < ApplicationController
 
   # DELETE /majors/1
   def destroy
+    @institution = Institution.find(@major.institution_id)
     @major.destroy
-    respond_to do |format|
-      format.html { redirect_to majors_url, notice: 'Major was successfully destroyed.' }
-    end
+    
+    flash[:success] = 'Major was successfully destroyed.'
+    redirect_to institution_path(@institution)
   end
 
   private

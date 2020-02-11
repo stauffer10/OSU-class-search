@@ -7,10 +7,11 @@ class CoursesController < ApplicationController
     
     def new
         @institution = Institution.find(params[:institution_id])
+        @major = Major.find(params[:major_id])
 
-        # must assign the course with a belong_to relationship with institution
-        @course = @institution.courses.new
-        #@course.institution_id = params[:institution_id]
+        # must assign the course with a belong_to relationship with major
+        @course = @major.courses.new
+        @course.institution_id = params[:institution_id]
     end
 
     def create
@@ -28,6 +29,7 @@ class CoursesController < ApplicationController
 
     def show
         @institution = Institution.find(@course.institution_id)
+        @major = Major.find(@course.major_id)
 
         # Retrieving difficuly score from nested attributes
         @score1 = @course.reviews.where(difficulty: 1).count
@@ -56,20 +58,22 @@ class CoursesController < ApplicationController
 
     def destroy
         @course = Course.find(params[:id])
+        @major = Major.find(@course.major_id)
         @course.destroy
         
         flash[:danger] = "Course was deleted"
-        redirect_to courses_path
+        redirect_to major_path(@major)
     end
 
     def edit
-
+        @institution = Institution.find(@course.institution_id)
+        @major = Major.find(@course.major_id)
     end
 
     def update
         @course = Course.find(params[:id])
         if @course.update(course_params)
-            flash[:success] = "Course was updated with reviews"
+            flash[:success] = "Course was Updated"
             redirect_to course_path(@course)
         else
             render 'edit'
@@ -91,6 +95,7 @@ class CoursesController < ApplicationController
             :groupwork, 
             :textbook,
             :institution_id, 
+            :major_id,
             reviews_attributes: [:reviews_content, :difficulty, :benefit, :time_spent],
         )
     end 
