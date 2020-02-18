@@ -2,6 +2,23 @@
 
 <div class = "row">
     <div class = "col-xs-12">
+
+        <%= simple_form_for @institution, class: "form-horizontal" do |f| %>
+            <%= f.input :name, class: "form-control", placeholder: "Name of Institution"  %>
+            <%= f.input :country, class: "form-control", label: "Country", prompt: "Select a Country", collection: CountryStateSelect.countries_collection %>
+            <%= f.input :state, CountryStateSelect.state_options(label: "State / Province", prompt: "Select a State/Province if Applicable", form: f, field_names: { :country => :country, :state => :state } ) %>
+            <%= f.input :city, class: "form-control", placeholder: "Name of City"  %>
+
+            <%= f.button :submit, class: "btn btn-primary btn-lg" %>
+        <% end %>
+
+
+
+
+
+
+<%
+=begin %>
         <%= form_with( model: @institution, local: true, class: "form-horizontal") do |f| %>
         
         
@@ -46,7 +63,6 @@
                 </div>
             </div>
 
-
             <div class = "form-group">
                 <div class = "control-label col-sm-2">
                     <%= f.label :logo %>
@@ -66,7 +82,20 @@
 
             
         <% end %>
+<%
+=end %>
 
     </div>
 </div>
+
+<script type="text/javascript">
+    $(document).on('ready page:load', function() {
+      return CountryStateSelect({
+        chosen_ui: false,
+        country_id: @institution.country,
+        state_id: @institution.state,
+        city_id: @institution.city
+      });
+    });
+</script>
 
