@@ -1,12 +1,7 @@
 <%
 =begin %>
 <% if current_user.admin? %>
-    <h1 align="center">Edit existing Course</h1>
-<% else %>
-    <h1 align="center">Creating Reviews for: <%= @course.coursename %></h1>
 <% end %>
-<%= render 'form' %>
-<%
 =end %>
 
 <h3 align="center" class="page-title">Edit Course: <%= @course.coursename %></h1>
