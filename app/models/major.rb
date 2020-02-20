@@ -6,5 +6,9 @@ class Major < ApplicationRecord
   accepts_nested_attributes_for :courses,
                                    allow_destroy: true
 
-  validates :majorname, presence: true, uniqueness: true, length: {minimum: 2, maximum: 100}
+  # VALIDATIONS
+  validates :majorname, 
+    presence: true, 
+    uniqueness: { case_sensitive: false, scope: :institution_id, message: "already exists for this institution" },
+    length: {minimum: 2, maximum: 100}
 end
