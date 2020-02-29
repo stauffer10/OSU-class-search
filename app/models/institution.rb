@@ -21,16 +21,27 @@ class Institution < ApplicationRecord
   validates :country, 
     presence: true, 
     length: {minimum: 2, maximum: 25}  
-=begin
+
   validate :state_is_real
 
   def state_is_real
-    states = ["AL", "AK", "AZ"]
-    if self.country == "USA" && !states.include?(self.state)
-      errors.add(:state, "is not a US state")
+
+    legit_states = []
+    country_keys = CS.countries.keys
+    country_keys.each do |country|
+      states = CS.states(country).values
+      legit_states.push(*states)
+    end  
+
+    us_states = ['AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY', 'AE', 'AA', 'AP']
+    canada_provinces = ['AB', 'BC', 'MB', 'NB', 'NL', 'NS', 'ON', 'PE', 'QC', 'SK']
+    legit_states.push(*us_states)
+    legit_states.push(*canada_provinces)
+
+    if !legit_states.include?(self.state) 
+      errors.add(:state, "is not a valid state/province. Check spelling and/or capitalization.")
     end
   end
-=end
 
 
   # FORMATTING
@@ -41,9 +52,9 @@ class Institution < ApplicationRecord
 
   def statify
     if self.state.present?
-      self.state = self.state.upcase
 
       if self.country == "USA"
+        self.state = self.state.upcase
         case self.state
         when "ALABAMA"
           self.state = "AL"
@@ -59,6 +70,8 @@ class Institution < ApplicationRecord
           self.state = "CO"
         when "CONNECTICUT"
           self.state = "CT"
+        when "DISTRICT OF COLUMBIA"
+          self.state = "DC"
         when "DELAWARE"
           self.state = "DE"
         when "FLORIDA"
@@ -148,6 +161,7 @@ class Institution < ApplicationRecord
         end
 
       elsif self.country == "Canada"
+        self.state = self.state.upcase
         case self.state
         when "ALBERTA"
           self.state = "AB"
@@ -170,14 +184,8 @@ class Institution < ApplicationRecord
         when "SASKATCHEWAN"
           self.state = "SK"
         end
-
-      else
-        self.state = self.state.titleize
       end
-
     end
   end
-
-
 
 end
