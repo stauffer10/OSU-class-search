@@ -41,7 +41,7 @@
                 </div>
 
                 <div class = "col-sm-8">
-                    <%= f.text_field :country, class: "form-control", placeholder: "Country Name", autofocus: true %>
+                    <%= f.select :country, options_for_select(@countries_for_select), class: "form-control", prompt: "Select a Country", autofocus: true %>
                 </div>
             </div>
 

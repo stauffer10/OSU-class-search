@@ -26,6 +26,7 @@ class MajorsController < ApplicationController
   def create
     @major = Major.new(major_params)
     @institution = Institution.find(@major.institution_id)
+
     @major.save
     if @major.save
       flash[:success] = "New major has been created"
