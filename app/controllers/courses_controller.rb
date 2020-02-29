@@ -16,14 +16,15 @@ class CoursesController < ApplicationController
 
     def create
         @course = Course.new(course_params)
-        @course.save!
+        @institution = Institution.find(@course.institution_id)
+        @major = Major.find(@course.major_id)
+
+        @course.save
         if @course.save
             flash[:success] = "New course has been created"
             redirect_to course_path(@course)
         else 
-            #render 'new'
-            flash[:error] = "Did not save"
-            redirect_to root_path
+            render 'new'
         end
     end
 
