@@ -36,6 +36,12 @@
                 </div>
             </div>
 
+            <div class = "form-group">
+                <div class = "control-label col-sm-2">
+                    <%= f.label :course_content %>
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="control-label col-sm-2">
                     <%= f.label "Prerequisite(s)" %>
@@ -43,6 +49,7 @@
 
                 <div class="col-sm-8">
                     <%= f.text_field :prerequisite, class: "form-control", placeholder: "Prerequisite(s) of class", autofocus: true %>
+                    <%= f.label :prerequisite %>
                 </div>
             </div>
 
@@ -56,6 +63,10 @@
                     <%= f.label :proctoredexams, "Yes" %>
                     <%= f.radio_button :proctoredexams, "No" %>
                     <%= f.label :proctoredexams, "No" %>
+                </div>
+
+                <div class="col-sm-8">
+                    <%= f.text_field :proctoredexams, class: "form-control", placeholder: "Proctored Exams of class", autofocus: true %>
                 </div>
             </div>
 

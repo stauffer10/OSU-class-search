@@ -21,6 +21,7 @@ class ReviewsController < ApplicationController
         @review = Review.new(review_params)
         @course = Course.find(@review.course_id)
         @review.save
+
         if @review.save!
             flash[:success] = "New review has been created."
             redirect_to course_path(@course)

@@ -53,8 +53,6 @@ class CoursesController < ApplicationController
         @time4 = @course.reviews.where(time_spent: "10-12").count
         @time5 = @course.reviews.where(time_spent: "13-15").count
         @time_spent = {"1-3 hours" => @time1, "4-6 hours" => @time2, "7-9 hours" => @time3, "10-12 hours" => @time4, "13-15 hours" => @time5}
-
-
     end
 
     def destroy
